@@ -1,8 +1,8 @@
-// Función para manejar el registro
-async function registrarUsuario(event) {
-    event.preventDefault();
+document.getElementById('signupForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
 
     const formData = {
+        cedula: document.getElementById('cedula').value,
         nombre: document.getElementById('nombre').value,
         email: document.getElementById('email').value,
         password: document.getElementById('password').value,
@@ -21,47 +21,19 @@ async function registrarUsuario(event) {
         const data = await response.json();
 
         if (response.ok) {
-            // Guardar token en localStorage
+            // Guardar token
             localStorage.setItem('token', data.token);
-            // Redirigir al dashboard
+            
+            // Mostrar mensaje de éxito
+            alert('Registro exitoso');
+            
+            // Redireccionar
             window.location.href = '/dashboard.html';
         } else {
-            alert(data.mensaje);
+            alert(data.mensaje || 'Error en el registro');
         }
     } catch (error) {
         console.error('Error:', error);
-        alert('Error al registrar usuario');
+        alert('Error al conectar con el servidor');
     }
-}
-
-// Función para manejar el login
-async function loginUsuario(event) {
-    event.preventDefault();
-
-    const formData = {
-        email: document.getElementById('email').value,
-        password: document.getElementById('password').value
-    };
-
-    try {
-        const response = await fetch('/api/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-            localStorage.setItem('token', data.token);
-            window.location.href = '/dashboard.html';
-        } else {
-            alert(data.mensaje);
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('Error al iniciar sesión');
-    }
-} 
+});

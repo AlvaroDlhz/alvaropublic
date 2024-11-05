@@ -178,6 +178,7 @@ body {
     padding: 1rem;
     border-radius: 8px;
     background-color: #f9f9f9;
+    transition: all 0.3s ease;
 }
 
 .task-status {
@@ -185,6 +186,7 @@ body {
     height: 12px;
     border-radius: 50%;
     margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
 }
 
 .task-status.completed {
@@ -195,6 +197,14 @@ body {
     background-color: #FFC107;
 }
 
+.task-status.completada {
+    background-color: #4CAF50;
+}
+
+.task-status.en_proceso {
+    background-color: #FFC107;
+}
+
 .task-content h4 {
     margin-bottom: 0.25rem;
 }
@@ -202,6 +212,25 @@ body {
 .task-content p {
     font-size: 0.9rem;
     color: #666;
+}
+
+.points-updated {
+    animation: pointsUpdate 1s ease;
+}
+
+@keyframes pointsUpdate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.task-actions button {
+    transition: all 0.2s ease;
+}
+
+.task-actions button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Responsive */

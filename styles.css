@@ -226,4 +226,88 @@ input:hover {
 
 .signup-btn:hover {
     box-shadow: 0 4px 6px rgba(255, 205, 0, 0.2);
-} 
+}
+
+/* Estilos adicionales para la página de login */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.remember-me input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.remember-me label {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.forgot-password {
+    color: #FFCD00;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.forgot-password:hover {
+    color: #E6B800;
+}
+
+/* Ajustes para el formulario de login */
+.login-form {
+    display: grid;
+    gap: 1.5rem;
+    align-content: start;
+}
+
+.login-form .form-group {
+    margin-bottom: 0;
+}
+
+/* Estilos para las alertas */
+.alerta-exito, .alerta-error {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    animation: slideIn 0.3s ease;
+    z-index: 1000;
+}
+
+.alerta-exito {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.alerta-error {
+    background-color: #f44336;
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos para el botón deshabilitado */
+.signup-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
