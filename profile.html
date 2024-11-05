@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil | Citizen</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Barra lateral (igual que en dashboard.html) -->
+        <aside class="sidebar">
+            <!-- ... código del sidebar ... -->
+        </aside>
+
+        <!-- Contenido principal del perfil -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Mi Perfil</h1>
+                <button class="edit-profile-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                    Editar Perfil
+                </button>
+            </header>
+
+            <div class="profile-grid">
+                <!-- Tarjeta de perfil principal -->
+                <section class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-cover"></div>
+                        <div class="profile-avatar">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Foto de perfil">
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h2>Juan Pérez</h2>
+                        <p class="location">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Bogotá, Colombia
+                        </p>
+                        <p class="member-since">Miembro desde Enero 2024</p>
+                    </div>
+                </section>
+
+                <!-- Estadísticas del usuario -->
+                <section class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-value">24</span>
+                        <span class="stat-label">Diligencias Completadas</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">1,250</span>
+                        <span class="stat-label">Puntos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">4.8</span>
+                        <span class="stat-label">Calificación</span>
+                    </div>
+                </section>
+
+                <!-- Información personal -->
+                <section class="personal-info">
+                    <h3>Información Personal</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Nombre completo</label>
+                            <p>Juan Alberto Pérez González</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Correo electrónico</label>
+                            <p>juan.perez@email.com</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Teléfono</label>
+                            <p>+57 300 123 4567</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Dirección</label>
+                            <p>Calle 123 #45-67, Bogotá</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Historial de actividad -->
+                <section class="activity-history">
+                    <h3>Actividad Reciente</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon completed">✓</div>
+                            <div class="activity-content">
+                                <h4>Pago de servicios públicos</h4>
+                                <p>Completado - 15 de Enero, 2024</p>
+                            </div>
+                            <div class="activity-points">+50 pts</div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon pending">⏳</div>
+                            <div class="activity-content">
+                                <h4>Renovación de licencia</h4>
+                                <p>En proceso - 13 de Enero, 2024</p>
+                            </div>
+                            <div class="activity-points pending">+100 pts</div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon completed">✓</div>
+                            <div class="activity-content">
+                                <h4>Pago de impuestos</h4>
+                                <p>Completado - 10 de Enero, 2024</p>
+                            </div>
+                            <div class="activity-points">+75 pts</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html> 
