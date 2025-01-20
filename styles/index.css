@@ -233,7 +233,7 @@ body{
   }*/
 .glassmorfism-esfera2{
     position: absolute;
-    left: 12rem;
+    left: 1rem;
     width: 200px;
     height: 200px;
     background: rgba(255, 255, 255, 0.15);
@@ -244,6 +244,7 @@ body{
     animation: moverEsfera2 2s infinite;padding: 4rem;
     border-radius: 9999px;
     background-color: #7dfceb;
+    
 }
 /*@keyframes moverEsfera2 {
     0% {
@@ -258,8 +259,8 @@ body{
   }*/
 .glassmorfism-esfera3{
     position: absolute;
-    left: 30rem;
-    top: 10rem;
+    left: 7rem;
+    top: 5rem;
     width: 200px;
     height: 200px;
     background: rgba(255, 255, 255, 0.15);
@@ -270,9 +271,11 @@ body{
     animation: moverEsfera3 2s infinite;padding: 4rem;
     border-radius: 9999px;
     background-color: #fcef7d;
+    z-index: 0;
 }
 .glassmorfism-esfera4{
     position: absolute;
+    padding: 4rem;
     left: 70rem;
     bottom: 10rem;
     width: 200px;
@@ -291,8 +294,8 @@ body{
     left: 50rem;
     top: 30rem
     width: 200px;
+    padding: 4rem;
     height: 200px;
-    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
