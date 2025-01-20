@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: antiquewhite;
+    border-radius: 99px;
+}
+::-webkit-scrollbar-track{
+    background: linear-gradient(black, #7d7dfc, black);
+}
+
+body{
+    background-color: #7d7dfc;
+    display: grid;
+    grid-template-columns: auto;
+    scroll-behavior: smooth;
+}
+
+.header{
+    padding: 2rem;
+}
+.indice{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-areas:"title title title"
+                        " indice1 indice2 indice3";
+    justify-content: space-between;
+    color: rgb(104, 104, 104);
+}
+.indice-title{
+    grid-area: title;
+    padding: 3rem;
+    text-align: center;
+}
+.indice-title h2{
+    color: #000000;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.indice1{
+    grid-area: indice1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border: 1px solid rgba(39, 39, 39, 0.336);
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+.indice1:hover{
+    border: 1px solid rgba(255, 255, 255, 0.336);
+    transition: 0.2s;
+    
+}
+.indice2{
+    grid-area: indice2;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border: 1px solid rgba(39, 39, 39, 0.336);
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+.indice2:hover{
+    border: 1px solid rgba(255, 255, 255, 0.336);
+    transition: 0.2s;
+}
+.indice3{
+    grid-area: indice3;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border: 1px solid rgba(39, 39, 39, 0.336);
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+.indice3:hover{
+    border: 1px solid rgba(255, 255, 255, 0.336);
+    transition: 0.2s;
+}
+.incide-subtitles{
+    margin: 3rem auto;
+    color: black;
+}
+.list-items-indice{
+    display: flex;
+    flex-direction: column;
+}
+.item-indice{
+    list-style: none;
+    margin: 1rem auto;
+}
+.link-indice{
+    color: rgb(53, 53, 53);
+    text-decoration: none;
+}
+.link-indice:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.main{
+    display: grid;
+    background-color:black;
+    padding: 2rem;
+    border-radius: 40px 40px 0 0;    
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+.about-section{
+    display: grid;
+    grid-template-areas:
+    "about-section1 about-section1"
+    "about-section2 about-section3";
+    grid-template-columns: 50%;
+    padding: 4rem;
+}
+.about-section1{
+    grid-area: about-section1;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+}
+.about-section2{
+    grid-area: about-section2;
+    padding: 0;
+    background-color: rgba(23, 170, 170, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-section3{
+    grid-area: about-section3;
+    padding: 7rem 7rem 7rem 0;
+    background-color: rgba(170, 23, 126, 0);
+    display: flex;
+    flex-direction: column;
+}
+.main-title{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+.main-subtitle{
+    font-weight: lighter;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+.circle1{
+    margin: 2rem auto;
+    padding: 1rem;
+    background: linear-gradient(45deg, black, #7d7dfc);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999999px;
+}
+.img{
+    width: 30vw;
+    height: 30vw;
+    filter: invert(1);
+}
+
+.glassmorfism{
+    display: flex;
+    flex-direction: column;
+    margin: 15rem auto 0 auto;
+    padding: 4rem;
+    border: 1px solid #7d7dfc;
+    border-radius: 15px;
+    width: 70%;
+
+}
+.glassmorfism-fondo{
+    display: flex;
+    width: 100%;
+}
+.glassmorfism-esfera1{
+    padding: 4rem;
+    border-radius: 9999px;
+    background-color: #7d7dfc;
+}
+.glassmorfism-esfera2{
+    padding: 4rem;
+    border-radius: 999999999px;
+    background-color: #7d7dfc;
+}
+.glassmorfism-esfera3{
+    padding: 4rem;
+    border-radius: 999999999px;
+    background-color: #7d7dfc;
+}
+.glassmorfism-esfera4{
+    padding: 4rem;
+    border-radius: 999999999px;
+    background-color: #7d7dfc;
+}
+.glassmorfism-esfera5{
+    padding: 4rem;
+    border-radius: 999999999px;
+    background-color: #7d7dfc;
+}
+
+.footer{
+    background-color: burlywood;
+    padding: 2rem;
+}
