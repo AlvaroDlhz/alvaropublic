@@ -120,7 +120,7 @@ body{
     padding: 2rem;
     border-radius: 40px 40px 0 0;    
     width: 100vw;
-    min-height: 100vh;
+    min-height: 200vh;
     margin: 0 auto;
     z-index: 0;
 }
@@ -144,7 +144,7 @@ body{
     background-color: rgba(23, 170, 170, 0);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 .about-section3{
@@ -181,20 +181,33 @@ body{
 }
 
 .glassmorfism{
-    display: flex;
-    flex-direction: column;
-    margin: 15rem auto 0 auto;
-    border: 1px solid #cec5df65;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 10rem auto 0 auto;
     border-radius: 15px;
-    width: 70%;
-    background-color: #ffffff62;
+    width: 95%;
+    background-image: url(../tridithing.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
     backdrop-filter: blur(10px);
     z-index: 2;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.075);
 
 }
 .glassmorfism-title h2{
-    z-index: 9;
+    display: inline-block;
+    font-size: 5rem;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+    background-color: rgba(255, 255, 255, 0.034);
+    color: rgba(112, 112, 112, 0.87);
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.048);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.103);
+    backdrop-filter: blur(15px);
+    transition: transform 0.1s;
 }
 .glassmorfism-fondo{
     position: relative;
@@ -202,7 +215,7 @@ body{
     height: 30vh; /* Ajusta según tus necesidades */
     overflow: auto;
     z-index: 3;
-    background-color: aqua;
+    background-color: rgba(255, 255, 255, 0.144);
     overflow: hidden;
 }
 .glassmorfism-esfera1{
@@ -212,7 +225,7 @@ body{
     width: 200px;
     height: 200px;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -220,7 +233,7 @@ body{
     border-radius: 9999px;
     background-color: #1010c0;
 }
-/*@keyframes moverEsfera1 {
+@keyframes moverEsfera1 {
     0% {
       transform: translate(0, 0);
     }
@@ -230,7 +243,7 @@ body{
     100% {
       transform: translate(0, 0);
     }
-  }*/
+  }
 .glassmorfism-esfera2{
     position: absolute;
     left: 1rem;
@@ -246,7 +259,7 @@ body{
     background-color: #7dfceb;
 
 }
-/*@keyframes moverEsfera2 {
+@keyframes moverEsfera2 {
     0% {
       transform: translate(50px, 10px, 15px);
     }
@@ -256,10 +269,10 @@ body{
     100% {
       transform: translate(50px, 10px, 15px);
     }
-  }*/
+  }
 .glassmorfism-esfera3{
     position: absolute;
-    left: 7rem;
+    left: 20rem;
     top: 5rem;
     width: 200px;
     height: 200px;
@@ -273,6 +286,17 @@ body{
     background-color: #fcef7d;
     z-index: 0;
 }
+@keyframes moverEsfera3 {
+    0% {
+      transform: translate(50px, 10px);
+    }
+    50% {
+      transform: translate(50px, 50px);
+    }
+    100% {
+      transform: translate(50px, 10px);
+    }
+  }
 .glassmorfism-esfera4{
     position: absolute;
     padding: 4rem;
