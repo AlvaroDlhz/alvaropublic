@@ -55,7 +55,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    border: 1px solid rgba(39, 39, 39, 0.336);
+    border: 1px solid rgba(39, 39, 39, 0);
     border-radius: 10px;
     padding: 2rem 1rem;
     width: 100%;
@@ -70,7 +70,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    border: 1px solid rgba(39, 39, 39, 0.336);
+    border: 1px solid rgba(39, 39, 39, 0);
     border-radius: 10px;
     padding: 2rem 1rem;
     width: 100%;
@@ -84,7 +84,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: start;
-    border: 1px solid rgba(39, 39, 39, 0.336);
+    border: 1px solid rgba(39, 39, 39, 0);
     border-radius: 10px;
     padding: 2rem 1rem;
     width: 100%;
@@ -96,6 +96,7 @@ body{
 .incide-subtitles{
     margin: 3rem auto;
     color: black;
+    text-align: center;
 }
 .list-items-indice{
     display: flex;
@@ -137,6 +138,7 @@ body{
     background-color: rgba(0, 255, 255, 0);
     display: flex;
     flex-direction: column;
+    margin-bottom: 7rem;
 }
 .about-section2{
     grid-area: about-section2;
@@ -169,168 +171,72 @@ body{
 .circle1{
     margin: 2rem auto;
     padding: 1rem;
+    overflow: hidden;
+    align-items: start;
+    justify-content: center;
+    font-weight: bold;
     background: linear-gradient(45deg, black, #7d7dfc);
     width: 2rem;
     height: 2rem;
     border-radius: 9999999px;
 }
 .img{
-    width: 30vw;
-    height: 30vw;
+    width: 25vw;
+    height: 25vw;
     filter: invert(1);
 }
 
 .glassmorfism{
     display: grid;
+    grid-template-areas:
+    "title title"
+    "content1 content2";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15rem auto;
     justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    margin: 10rem auto 0 auto;
+    margin: 20rem auto 0 auto;
+    border: 1px solid #ffffff33;
     border-radius: 15px;
     width: 95%;
-    background-image: url(../tridithing.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    backdrop-filter: blur(10px);
-    z-index: 2;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.075);
+    background-color: #7d7dfc00;
 
+}
+.glassmorfism-title{
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #fcef7d;*/
+    width: 100%;
+    height: 15rem;
+    padding: 0 28rem;
+}
+.glassmorfism-title-img1{
+    width: 15rem;
+    height: 15rem;
 }
 .glassmorfism-title h2{
-    display: inline-block;
-    font-size: 5rem;
+    /*background-color: #1010c0;*/
+    font-size: 3rem;
     margin: 0 auto;
-    padding: 2rem 4rem;
-    background-color: rgba(255, 255, 255, 0.034);
-    color: rgba(112, 112, 112, 0.87);
-    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.048);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.103);
-    backdrop-filter: blur(15px);
-    transition: transform 0.1s;
 }
-.glassmorfism-fondo{
-    position: relative;
-    width: 100%;
-    height: 30vh; /* Ajusta según tus necesidades */
-    overflow: auto;
-    z-index: 3;
-    background-color: rgba(255, 255, 255, 0.144);
-    overflow: hidden;
+.glassmorfism-title-img2{
+    width: 15rem;
+    height: 15rem;
+    transform: scaleX(-1);
 }
-.glassmorfism-esfera1{
-    position: absolute;
-    left: -8rem;
-    top: 5rem;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.15);
-    
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: moverEsfera1 10s infinite;padding: 4rem;
-    border-radius: 9999px;
-    background-color: #1010c0;
+.glassmorfism-content1{
+    grid-area: content1;
+    padding: 8rem 2rem 4rem 10rem;
+    background-color: #0000df00;
 }
-@keyframes moverEsfera1 {
-    0% {
-      transform: translate(0, 0);
-    }
-    50% {
-      transform: translate(50px, 50px);
-    }
-    100% {
-      transform: translate(0, 0);
-    }
-  }
-.glassmorfism-esfera2{
-    position: absolute;
-    left: 1rem;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: moverEsfera2 2s infinite;padding: 4rem;
-    border-radius: 9999px;
-    background-color: #7dfceb;
-
-}
-@keyframes moverEsfera2 {
-    0% {
-      transform: translate(50px, 10px, 15px);
-    }
-    50% {
-      transform: translate(50px, 50px);
-    }
-    100% {
-      transform: translate(50px, 10px, 15px);
-    }
-  }
-.glassmorfism-esfera3{
-    position: absolute;
-    left: 20rem;
-    top: 5rem;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: moverEsfera3 2s infinite;padding: 4rem;
-    border-radius: 9999px;
-    background-color: #fcef7d;
-    z-index: 0;
-}
-@keyframes moverEsfera3 {
-    0% {
-      transform: translate(50px, 10px);
-    }
-    50% {
-      transform: translate(50px, 50px);
-    }
-    100% {
-      transform: translate(50px, 10px);
-    }
-  }
-.glassmorfism-esfera4{
-    position: absolute;
+.glassmorfism-content2{
+    grid-area: content2;
     padding: 4rem;
-    left: 70rem;
-    bottom: 10rem;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: moverEsfera3 2s infinite;padding: 4rem;
-    border-radius: 9999px;
-    background-color: #51ff7c;
+    background-color: rgba(137, 43, 226, 0);
 }
-.glassmorfism-esfera5{
-    position: absolute;
-    left: 50rem;
-    top: 10rem;
-    width: 200px;
-    padding: 4rem;
-    height: 200px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: moverEsfera5 2s infinite; padding: 4rem;
-    border-radius: 9999px;
-    background-color: #000;
-}
-
 .footer{
     background-color: burlywood;
-    padding: 2rem;
-    margin: 100rem auto;
+    background: linear-gradient(black, #7d7dfc) ;
+    padding: 10rem;
 }
