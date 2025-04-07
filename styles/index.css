@@ -84,7 +84,7 @@ body{
     transition: 0.2s;
 }
 .incide-subtitles{
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     color: black;
     text-align: center;
 }
