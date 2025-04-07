@@ -34,7 +34,6 @@ body{
     grid-area: title;
     margin-bottom: 3rem;
     text-align: center;
-    background-color: #7d7dfc;
 }
 .indice-title h1{
     color: #000000;
@@ -85,7 +84,7 @@ body{
     transition: 0.2s;
 }
 .incide-subtitles{
-    margin: 3rem auto;
+    margin: 0 auto;
     color: black;
     text-align: center;
 }
@@ -102,7 +101,7 @@ body{
     text-decoration: none;
 }
 .link-indice:hover{
-    color: rgb(255, 255, 255);
+    color: rgb(76, 255, 195);
     text-decoration: none;
 }
 
