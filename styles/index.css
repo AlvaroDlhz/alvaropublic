@@ -108,7 +108,7 @@ body{
 .main{
     display: grid;
     background-color:black;
-    padding: 2rem;   
+    padding: 2rem 1rem;   
     width: 100vw;
     min-height: 200vh;
     margin: 0 auto;
@@ -150,6 +150,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
     margin: 0 auto;
     font-size: 2rem;
+    background-color: #7d7dfc;
 }
 .main-subtitle{
     font-weight: lighter;
