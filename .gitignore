@@ -1,0 +1,18 @@
+# VS Code
+.vscode/
+*.code-workspace
+
+# Node.js
+node_modules/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Archivos de compilación
+dist/
+build/

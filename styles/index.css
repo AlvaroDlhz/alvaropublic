@@ -6,7 +6,7 @@
     color: white;
     overflow-x: hidden;
     scroll-behavior: smooth;
-}
+/*}
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -19,11 +19,12 @@
     border-radius: 99px;
 }
 ::-webkit-scrollbar-track{
-    background: linear-gradient(black, #7d7dfc, black);
-}
+    background-color: black;
+}*/
 
 body{
-    background-color: #7d7dfc;
+    /*background-color: #7d7dfc;*/
+    background-color: #f5f5f5;
     display: grid;
     grid-template-columns: auto;
     scroll-behavior: smooth;
@@ -34,10 +35,12 @@ body{
 }
 .indice{
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-areas:"title title title"
-                        " indice1 indice2 indice3";
-    justify-content: space-between;
+    grid-template-columns: 100%;
+    grid-template-areas:"title"
+                        "indice2"
+                        "indice3"
+                        "indice1";
+    justify-content: center;
     color: rgb(104, 104, 104);
 }
 .indice-title{
@@ -45,7 +48,7 @@ body{
     padding: 3rem;
     text-align: center;
 }
-.indice-title h2{
+.indice-title h1{
     color: #000000;
     font-size: 2rem;
     font-weight: bold;
@@ -61,7 +64,7 @@ body{
     width: 100%;
 }
 .indice1:hover{
-    border: 1px solid rgba(255, 255, 255, 0.336);
+    border: 1px solid rgba(0, 0, 0, 0.336);
     transition: 0.2s;
     
 }
@@ -76,7 +79,7 @@ body{
     width: 100%;
 }
 .indice2:hover{
-    border: 1px solid rgba(255, 255, 255, 0.336);
+    border: 1px solid rgba(0, 0, 0, 0.336);
     transition: 0.2s;
 }
 .indice3{
@@ -90,7 +93,7 @@ body{
     width: 100%;
 }
 .indice3:hover{
-    border: 1px solid rgba(255, 255, 255, 0.336);
+    border: 1px solid rgba(0, 0, 0, 0.336);
     transition: 0.2s;
 }
 .incide-subtitles{
@@ -118,8 +121,7 @@ body{
 .main{
     display: grid;
     background-color:black;
-    padding: 2rem;
-    border-radius: 40px 40px 0 0;    
+    padding: 2rem;   
     width: 100vw;
     min-height: 200vh;
     margin: 0 auto;
