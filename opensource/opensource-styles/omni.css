@@ -1,3 +1,10 @@
+:root {
+    --cards-backgound-color: #6b6bff1a;
+    --cards-border-color: #f5f5f528;
+    --cards-border-color-hover: #f5f5f54f;
+    --background-color: #07000f;
+    --text-color: #f5f5f5;
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -116,6 +123,92 @@ body{
     color: #f5f5f5; 
     transition: all 0.2s ease-in-out;
 }
+/* Estilos del Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.479);
+}
+
+.modal-content {
+    background-color: #161635;
+    margin: 10% auto;
+    padding: 2rem;
+    border: 1px solid var(--cards-border-color);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #f5f5f5;
+}
+
+.close-modal:hover {
+    color: #e44a4a;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-bttn {
+    background-color: #52fac2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-bttn:hover {
+    background-color: #45a049;
+}
+
+/* Animación del modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content {
+    animation: modalFadeIn 0.3s ease-out;
+}
 .main{
 
 }
@@ -153,147 +246,70 @@ body{
 
 .converter-options{
     display: grid;
-    grid-template-areas: "option1 option2 option3 option4 option5"
+    grid-template-areas: "title title title title title"
+                        "option1 option2 option3 option4 option5"
                         "option6 option7 option8 option9 option10"
                         "option11 option12 option13 option14 option15"
                         "option16 option17 option18 option19 option20"
                         "option21 option22 option23 option24 option25";
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto repeat(3, 1fr);
     gap: 1rem;
     padding: 1rem 4rem;
     margin-top: 10rem;
 }
-
-.converter-option-1{
+.converter-options-title{
+    grid-area: title;
+    font-family: "onely_sans";
+    font-size: 3rem;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.converter-option-1, .converter-option-2, .converter-option-3, .converter-option-4, .converter-option-5, .converter-option-6, .converter-option-7, .converter-option-8, .converter-option-9, .converter-option-10, .converter-option-11, .converter-option-12, .converter-option-13, .converter-option-14, .converter-option-15, .converter-option-16, .converter-option-17, .converter-option-18, .converter-option-19, .converter-option-20, .converter-option-21, .converter-option-22, .converter-option-23, .converter-option-24, .converter-option-25{
     grid-area: option1;
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 2rem 2rem 1rem 2rem;
-    background-color: #6b6bff1a;
+    background-color: var(--cards-backgound-color);
+    color: #f5f5f556;
 }
-.converter-option-1:hover{
-    border: 1px solid #f5f5f5;
+.converter-option-1:hover, .converter-option-2:hover, .converter-option-3:hover, .converter-option-4:hover, .converter-option-5:hover, .converter-option-6:hover, .converter-option-7:hover, .converter-option-8:hover, .converter-option-9:hover, .converter-option-10:hover, .converter-option-11:hover, .converter-option-12:hover{
+    border: 1px solid var(--cards-border-color-hover);
     transition: all 0.2s ease-in-out;
 }
-
 .converter-option-2{
     grid-area: option2;
-    border: 1px solid #f5f5f528;
-    border-radius: 10px;
-    padding: 2rem 2rem 1rem 2rem;
-    background-color: #6b6bff1a;
 }
-.converter-option-2:hover{
-    border: 1px solid #f5f5f5;
-    transition: all 0.2s ease-in-out;
-}
-
 .converter-option-3{
     grid-area: option3;
-    border: 1px solid #f5f5f528;
-    border-radius: 10px;
-    padding: 2rem 2rem 1rem 2rem;
-    background-color: #6b6bff1a;
 }
-.converter-option-3:hover{
-    border: 1px solid #f5f5f5;
-    transition: all 0.2s ease-in-out;
-}
-
 .converter-option-4{
     grid-area: option4;
-    border: 1px solid #f5f5f528;
-    border-radius: 10px;
-    padding: 2rem 2rem 1rem 2rem;
-    background-color: #6b6bff1a;
 }
-.converter-option-4:hover{
-    border: 1px solid #f5f5f5;
-    transition: all 0.2s ease-in-out;
-}
-
 .converter-option-5{
     grid-area: option5;
-    border: 1px solid #f5f5f528;
-    border-radius: 10px;
-    padding: 2rem 2rem 1rem 2rem;
-    background-color: #6b6bff1a;
-}
-.converter-option-5:hover{
-    border: 1px solid #f5f5f5;
-    transition: all 0.2s ease-in-out;
 }
 .converter-option-6{
     grid-area: option6;
-    border: 1px solid #f5f5f528;
-    border-radius: 10px;
-    padding: 2rem 2rem 1rem 2rem;
-    background-color: #6b6bff1a;
-}
-.converter-option-6:hover{
-    border: 1px solid #f5f5f5;
-    transition: all 0.2s ease-in-out;
 }
 .converter-option-7{
-    border: 1px solid #f5f5f528;
-    border-radius: 10px;
-    padding: 2rem 2rem 1rem 2rem;
-    background-color: #6b6bff1a;
-}
-.converter-option-7:hover{
-    border: 1px solid #f5f5f5;
-    transition: all 0.2s ease-in-out;
+    grid-area: option7;
 }
 .converter-option-8{
-    border: 1px solid #f5f5f528;
-    border-radius: 10px;
-    padding: 2rem 2rem 1rem 2rem;
-    background-color: #6b6bff1a;
-}
-.converter-option-8:hover{
-    border: 1px solid #f5f5f5;
-    transition: all 0.2s ease-in-out;
+    grid-area: option8;
 }
 .converter-option-9{
-    border: 1px solid #f5f5f528;
-    border-radius: 10px;
-    padding: 2rem 2rem 1rem 2rem;
-    background-color: #6b6bff1a;
-}
-.converter-option-9:hover{
-    border: 1px solid #f5f5f5;
-    transition: all 0.2s ease-in-out;
+    grid-area: option9;
 }
 .converter-option-10{
-    border: 1px solid #f5f5f528;
-    border-radius: 10px;
-    padding: 2rem 2rem 1rem 2rem;
-    background-color: #6b6bff1a;
-}
-.converter-option-10:hover{
-    border: 1px solid #f5f5f5;
-    transition: all 0.2s ease-in-out;
+    grid-area: option10;
 }
 .converter-option-11{
-    border: 1px solid #f5f5f528;
-    border-radius: 10px;
-    padding: 1rem;
-    background-color: #6b6bff1a;
-}
-.converter-option-11:hover{
-    border: 1px solid #f5f5f5;
-    transition: all 0.2s ease-in-out;
+    grid-area: option11;
 }
 .converter-option-12{
-    border: 1px solid #f5f5f528;
-    border-radius: 10px;
-    padding: 1rem;
-    background-color: #6b6bff1a;
-}
-.converter-option-12:hover{
-    border: 1px solid #f5f5f5;
-    transition: all 0.2s ease-in-out;
+    grid-area: option12;
 }
 .converter-option-13{
     border: 1px solid #f5f5f528;
@@ -456,6 +472,18 @@ body{
     width: 3rem;
     height: 3rem;
 }
+.mp3-logo{
+    width: 3rem;
+    height: 3rem;
+}
+.mp4-logo{
+    width: 3rem;
+    height: 3rem;
+}
+.youtube-logo{
+    width: 3rem;
+    height: 3rem;
+}
 .try-it-bttn{
     margin: 3rem auto 0 auto;
     width: 100%;
@@ -502,4 +530,107 @@ body{
 .linkedin-social-logo{
     width: 4rem;
     height: 4rem;
+}
+
+@media screen and (max-width: 1800px) {
+    .converter-options{
+        display: grid;
+        grid-template-areas: "title title title title"
+                            "option1 option2 option3 option4"
+                            "option5 option6 option7 option8"
+                            "option9 option10 option11 option12";
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem 8rem;
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .converter-options{
+        display: grid;
+        grid-template-areas: "title title title"
+                            "option1 option2 option3"
+                            "option4 option5 option6"
+                            "option7 option8 option9"
+                            "option10 option11 option12";
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto repeat(4, 1fr);
+        gap: 1rem;
+        padding: 1rem 8rem;
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .converter-options{
+        display: grid;
+        grid-template-areas: "title title"
+                            "option1 option2"
+                            "option3 option4"
+                            "option5 option6"
+                            "option7 option8"
+                            "option9 option10"
+                            "option11 option12";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto repeat(4, 1fr);
+        gap: 1rem;
+        padding: 1rem 18rem;
+        margin-top: 10rem;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .converter-options{
+        padding: 1rem 14rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .converter-options{
+        padding: 1rem 12rem;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .converter-options{
+        padding: 1rem 10rem;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .converter-options{
+        padding: 1rem 8rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    .converter-options{
+        display: grid;
+        grid-template-areas: "title"
+                            "option1"
+                            "option2"
+                            "option3"
+                            "option4"
+                            "option5"
+                            "option6"
+                            "option7"
+                            "option8"
+                            "option9"
+                            "option10"
+                            "option11"
+                            "option12";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(4, 1fr);
+        gap: 1rem;
+        padding: 1rem 16rem;
+        margin-top: 10rem;
+    }
+    @media screen and (max-width: 800px) {
+        .converter-options{
+            padding: 1rem 12rem;
+        }
+        
+    }
+    @media screen and (max-width: 700px) {
+        .converter-options{
+            padding: 1rem 4rem;
+        }
+    }
 }
