@@ -1,3 +1,13 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #07000f;
+}
+::-webkit-scrollbar-thumb {
+    background: #f5f5f5;
+    border-radius: 10px;
+}
 *{
     box-sizing: border-box;
     padding: 0;
@@ -54,11 +64,14 @@ body{
     list-style: none;
     gap: 2rem;
 }
-.navbar-list-1 a{
+.navbar-list-1-a{
     text-decoration: none;
-    color: #f5f5f5;
+    color: #f5f5f581;
     font-size: 1rem;
     font-weight: lighter;
+}
+.navbar-list-1-a:hover{
+    color: #f5f5f5;
     transition: all 0.2s ease-in-out;
 }
 .navbar-links-2{
@@ -108,7 +121,7 @@ body{
 }
 .main-title{
     font-family: "onely_sans";
-    font-size: 7rem;
+    font-size: 10rem;
     font-weight: lighter;
     text-align: center;
     color: #f5f5f5;
@@ -140,17 +153,24 @@ body{
 
 .converter-options{
     display: grid;
-    grid-template-areas: "option1 option2 option3 option4 option5";
+    grid-template-areas: "option1 option2 option3 option4 option5"
+                        "option6 option7 option8 option9 option10"
+                        "option11 option12 option13 option14 option15"
+                        "option16 option17 option18 option19 option20"
+                        "option21 option22 option23 option24 option25";
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 1rem;
-    padding: 1rem;
+    padding: 1rem 4rem;
     margin-top: 10rem;
 }
 
 .converter-option-1{
+    grid-area: option1;
     border: 1px solid #f5f5f528;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem 2rem 1rem 2rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-1:hover{
     border: 1px solid #f5f5f5;
@@ -158,9 +178,11 @@ body{
 }
 
 .converter-option-2{
+    grid-area: option2;
     border: 1px solid #f5f5f528;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem 2rem 1rem 2rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-2:hover{
     border: 1px solid #f5f5f5;
@@ -168,9 +190,11 @@ body{
 }
 
 .converter-option-3{
+    grid-area: option3;
     border: 1px solid #f5f5f528;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem 2rem 1rem 2rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-3:hover{
     border: 1px solid #f5f5f5;
@@ -178,9 +202,11 @@ body{
 }
 
 .converter-option-4{
+    grid-area: option4;
     border: 1px solid #f5f5f528;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem 2rem 1rem 2rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-4:hover{
     border: 1px solid #f5f5f5;
@@ -188,18 +214,22 @@ body{
 }
 
 .converter-option-5{
+    grid-area: option5;
     border: 1px solid #f5f5f528;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem 2rem 1rem 2rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-5:hover{
     border: 1px solid #f5f5f5;
     transition: all 0.2s ease-in-out;
 }
 .converter-option-6{
+    grid-area: option6;
     border: 1px solid #f5f5f528;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem 2rem 1rem 2rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-6:hover{
     border: 1px solid #f5f5f5;
@@ -208,7 +238,8 @@ body{
 .converter-option-7{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 2rem 2rem 1rem 2rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-7:hover{
     border: 1px solid #f5f5f5;
@@ -218,6 +249,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-8:hover{
     border: 1px solid #f5f5f5;
@@ -227,6 +259,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-9:hover{
     border: 1px solid #f5f5f5;
@@ -236,6 +269,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-10:hover{
     border: 1px solid #f5f5f5;
@@ -245,6 +279,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-11:hover{
     border: 1px solid #f5f5f5;
@@ -254,6 +289,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-12:hover{
     border: 1px solid #f5f5f5;
@@ -263,6 +299,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-13:hover{
     border: 1px solid #f5f5f5;
@@ -272,6 +309,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-14:hover{
     border: 1px solid #f5f5f5;
@@ -281,6 +319,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-15:hover{
     border: 1px solid #f5f5f5;
@@ -290,6 +329,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-16:hover{
     border: 1px solid #f5f5f5;
@@ -299,6 +339,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-17:hover{
     border: 1px solid #f5f5f5;
@@ -308,6 +349,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-18:hover{
     border: 1px solid #f5f5f5;
@@ -317,6 +359,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-19:hover{
     border: 1px solid #f5f5f5;
@@ -326,6 +369,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-20:hover{
     border: 1px solid #f5f5f5;
@@ -335,6 +379,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-21:hover{
     border: 1px solid #f5f5f5;
@@ -344,6 +389,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-22:hover{
     border: 1px solid #f5f5f5;
@@ -353,6 +399,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-23:hover{
     border: 1px solid #f5f5f5;
@@ -362,6 +409,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-24:hover{
     border: 1px solid #f5f5f5;
@@ -371,6 +419,7 @@ body{
     border: 1px solid #f5f5f528;
     border-radius: 10px;
     padding: 1rem;
+    background-color: #6b6bff1a;
 }
 .converter-option-25:hover{
     border: 1px solid #f5f5f5;
@@ -382,4 +431,54 @@ body{
     font-family: "onely_sans";
     font-size: 1.5rem;
     font-weight: lighter;
+}
+.word-logo{
+    width: 3rem;
+    height: 3rem;
+}
+.pdf-logo{
+    width: 3rem;
+    height: 3rem;
+}
+.jpg-logo{
+    width: 3rem;
+    height: 3rem;
+}
+.powerpoint-logo{
+    width: 3rem;
+    height: 3rem;
+}
+.excel-logo{
+    width: 3rem;
+    height: 3rem;
+}
+.try-it-bttn{
+    margin: 3rem auto 0 auto;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    color: #000;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.try-it-bttn:hover{
+    background-color: #6b6bff;   
+    color: #f5f5f5; 
+    transition: all 0.2s ease-in-out;
+}
+.footer {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-top: 1px solid #6b6bff2d;
+    border-radius: 3rem 3rem 0 0;
 }
