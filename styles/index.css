@@ -161,12 +161,12 @@ body{
 .footer{
     color: var(--color-background);
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
     grid-template-areas: 
-        "footer-title footer-title"
-        "footer1 footer2"
-        "footer3 footer4";
+        "footer-title footer-title footer-title"
+        "footer1 footer2 footer3"
+        "footer4 footer4 footer4";
     gap: 5px;
     justify-content: center;
     align-items: center;
@@ -199,11 +199,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-self: center;
     padding: ;
     margin-bottom: 2px;
     border-radius: 10px;
     transition: all 0.1s ease-in-out;
     color: var(--color-text);
+    width: 100px;
 }
 .footer-content2{
     grid-area: footer2;
