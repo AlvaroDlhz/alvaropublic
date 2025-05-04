@@ -76,17 +76,13 @@ body{
     font-family: "title-font", sans-serif;
     letter-spacing: 2px;
 }
-.indice1, .indice2, .indice3{
-    grid-area: indice1;
+.indice2, .indice3{
+    grid-area: indice2;
     background-color: rgba(153, 205, 50, 0);
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 10px;
-}
-.indice2{
-    grid-area: indice2;
-    background-color: #3498db00;
 }
 .indice3{
     grid-area: indice3;
