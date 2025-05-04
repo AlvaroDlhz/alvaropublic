@@ -199,11 +199,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: ;
     margin-bottom: 2px;
     border-radius: 10px;
     transition: all 0.1s ease-in-out;
-    background-color: var(--color-background);
     color: var(--color-text);
 }
 .footer-content2{
@@ -214,4 +213,12 @@ body{
 }
 .footer-content4{
     grid-area: footer4;
+}
+.footer-icon{
+    width: 100px;
+    height: 100px;
+    transition: all 0.1s ease-in-out;
+}
+.footer-icon:hover{
+    transform: scale(1.05);
 }
