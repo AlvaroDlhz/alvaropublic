@@ -1,0 +1,28 @@
+### Resumen del Proyecto
+
+1. **Estructura del Proyecto**
+   - Página web personal/profesional con barra lateral, encabezado, secciones principales y pie de página.
+   - Diseño responsivo con media queries.
+   - Archivos principales: `index.html`, `omni.html`, `index.css`, `omni.css`.
+
+2. **Funcionalidades Actuales**
+   - Animaciones y gradientes en títulos.
+   - Hover effects en enlaces y botones.
+   - Secciones para conversión de archivos (PDF, Word, imágenes, etc.).
+   - Diseño adaptado a diferentes tamaños de pantalla.
+
+3. **Posibles Siguientes Pasos**
+   - **Diseño**:
+     - Optimizar `position: sticky` y unificar estilos entre archivos CSS.
+     - Mejorar la responsividad y consolidar variables CSS.
+   - **Funcionalidades**:
+     - Implementar navegación activa y scroll suave con JavaScript.
+     - Agregar funcionalidad real para conversión de archivos.
+   - **Organización**:
+     - Crear un `README.md` para documentar el proyecto.
+     - Limpiar y estandarizar el código.
+   - **Optimización**:
+     - Minimizar archivos CSS/JS y optimizar imágenes.
+     - Mejorar accesibilidad con etiquetas ARIA y contraste de colores.
+   - **Integración con GitHub**:
+     - Subir el proyecto a un repositorio y configurar un flujo de trabajo.
