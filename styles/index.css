@@ -8,6 +8,7 @@ html{
     --color-background: #12052b;
     --color-links: #2c3e50;
     --color-text: #f5f5f5;
+    --color-subtitle: #a8adb1;
 }
 @font-face{
     font-family: 'title-font';
@@ -118,20 +119,28 @@ body{
     background-color: var(--color-background);
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(4, auto)
+        "title"
+        "about1"
+        "about2"
+        "about3";
     gap: 20px;
     justify-content: center;
     align-items: center;
-    padding: 20px 10px;
+    padding: 20px;
     min-height: 100vh;
     border-radius: 20px;
+}
+.about-section1{
+    grid-area: about1;
+    justify-content: center;
+    align-items: center;
 }
 .main-title{
     font-size: 2em;
     font-weight: lighter;
     text-align: center;
     color: var(--color-text);
-    width: 100vw;
     margin-bottom: 10px;
     font-family: "title-font", sans-serif;
     letter-spacing: 2px;
@@ -142,13 +151,13 @@ body{
     height: 100%;
     border-radius: 20px;
     margin-bottom: 20px;
+    margin: 10px 0 20px 0;
 }
 .main-subtitle{
     font-size: 1.5em;
     font-weight: lighter;
     text-align: center;
-    color: var(--color-text);
-    width: 100vw;
+    color: var(--color-subtitle);
     margin-bottom: 10px;
     font-family: "title-font", sans-serif;
 }
