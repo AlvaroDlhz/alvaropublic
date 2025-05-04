@@ -166,7 +166,7 @@ body{
     grid-template-areas: 
         "footer-title footer-title footer-title"
         "footer1 footer2 footer3"
-        "footer4 footer4 footer4";
+        "footer4 footer5 footer6";
     gap: 5px;
     justify-content: center;
     align-items: center;
@@ -193,7 +193,7 @@ body{
     padding: 10px;
     font-family: "title-font", sans-serif;
 }
-.footer-content1, .footer-content2, .footer-content3, .footer-content4{
+.footer-content1, .footer-content2, .footer-content3, .footer-content4, .footer-content5, .footer-content6{
     grid-area: footer1;
     display: flex;
     flex-direction: column;
@@ -215,6 +215,12 @@ body{
 }
 .footer-content4{
     grid-area: footer4;
+}
+.footer-content5{
+    grid-area: footer5;
+}
+.footer-content6{
+    grid-area: footer6;
 }
 .footer-icon{
     width: 100px;
