@@ -15,3 +15,14 @@
         h2.style.transform = `rotate(${angle}deg)`;
     });
 });*/
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const cards = Array.from(track.children);
+    // Duplicar las tarjetas
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      track.appendChild(clone);
+    });
+  });
