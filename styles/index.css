@@ -164,6 +164,7 @@ body{
   .carousel {
     width: 100%;
     overflow: hidden;
+    margin-bottom: 10px;
   }
   
   .carousel-track {
@@ -203,6 +204,16 @@ body{
       font-size: 1rem;
     }
   }
+
+.about-section2{
+    grid-area: about2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 
 .footer{
     color: var(--color-background);
