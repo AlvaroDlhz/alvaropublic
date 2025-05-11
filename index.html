@@ -84,11 +84,11 @@
             <div class="about-section4">
                 <h3 class="main-subtitle">Contact me</h3>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        <button type="submit" onclick="sendEmail()">Send</button>
+                    <form id="contactForm" class="contact-form">
+                        <input class="contact-input" type="text" id="name" name="name" placeholder="What's your name?" required>
+                        <input class="contact-input" type="email" id="email" name="email" placeholder="Have an email?" required>
+                        <textarea class="contact-input" id="message" name="message" placeholder="Say something cool 😉" rows="5" required></textarea>
+                        <button class="send-contact-bttn" type="submit" onclick="sendEmail()">Send</button>
                     </form>
                     <p id="formResponse" class="form-response"></p>
                 </div>
