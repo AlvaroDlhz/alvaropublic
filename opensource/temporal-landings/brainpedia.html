@@ -7,6 +7,7 @@
     <meta name="description" content="Discover Brainpedia - A revolutionary knowledge platform combining academic rigor with modern interactivity">
     <link rel="stylesheet" href="../opensource-styles/brainpedia.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="../opensource-scripts/brainpedia-scripts.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -14,6 +15,11 @@
             <div class="logo">
                 <h1>Brain<span>pedia</span></h1>
             </div>
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-links">
                 <a href="#features">Features</a>
                 <a href="#roadmap">Roadmap</a>
@@ -27,7 +33,7 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>The Future of Knowledge Sharing</h1>
+                <h1>Knowledge for everybody</h1>
                 <p>Where academic rigor meets modern interactivity</p>
                 <div class="hero-cta">
                     <button class="primary-btn">Learn More</button>
@@ -57,26 +63,152 @@
                     <h3>Expert Community</h3>
                     <p>Contributions from verified academics and professionals</p>
                 </div>
+            </div><br>
+             <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Organized documentation</h3>
+                    <p>Strict verification process and academic standards</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Interactive Learning</h3>
+                    <p>Dynamic content with 3D models and simulations</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Expert Community</h3>
+                    <p>Contributions from verified academics and professionals</p>
+                </div>
+            </div><br>
+             <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Academic Rigor</h3>
+                    <p>Strict verification process and academic standards</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Interactive Learning</h3>
+                    <p>Dynamic content with 3D models and simulations</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Expert Community</h3>
+                    <p>Contributions from verified academics and professionals</p>
+                </div>
             </div>
         </section>
+
+        <section id="about" class="about">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>What is Brainpedia?</h2>
+            <p>Brainpedia is more than just another knowledge platform. We're building the future of interactive learning and academic documentation, where complex concepts come to life through modern technology while maintaining the highest standards of academic rigor.</p>
+            
+            <h3>Our Philosophy</h3>
+            <p>We believe that knowledge should be:</p>
+            <ul class="philosophy-list">
+                <li><i class="fas fa-check"></i> Accessible yet academically rigorous</li>
+                <li><i class="fas fa-check"></i> Interactive rather than static</li>
+                <li><i class="fas fa-check"></i> Verified by experts and peer-reviewed</li>
+                <li><i class="fas fa-check"></i> Continuously evolving and improving</li>
+            </ul>
+
+            <h3>Our Mission</h3>
+            <p>To transform how we document and share knowledge by combining academic precision with cutting-edge interactive technology, making complex topics more engaging and easier to understand.</p>
+
+            <div class="demo-link">
+                <h3>See it in action</h3>
+                <p>Experience our vision through this interactive article:</p>
+                <a href="#" class="demo-button">
+                    <i class="fas fa-flask"></i>
+                    Interactive Demo
+                    <span class="coming-soon">Coming Soon</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="roadmap" class="roadmap">
             <h2>Development Roadmap</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Phase 1: Foundation</h3>
+                    <h3>Working on: Foundation</h3>
+                    <p>Basic platform structure and content verification system</p>
+                    <p>Basic platform structure and content verification system</p>
                     <p>Basic platform structure and content verification system</p>
                 </div>
                 <div class="timeline-item">
-                    <h3>Phase 2: Interaction</h3>
+                    <h3>Coming soon: Interaction</h3>
                     <p>Interactive elements and 3D model support</p>
                 </div>
                 <div class="timeline-item">
-                    <h3>Phase 3: Community</h3>
+                    <h3>coming soon: Community</h3>
                     <p>Expert contributor system and peer review</p>
                 </div>
             </div>
         </section>
+
+        <section id="waitlist" class="waitlist">
+    <div class="waitlist-container">
+        <div class="waitlist-content">
+            <h2>Be Among the First</h2>
+            <p class="waitlist-description">Join our exclusive waitlist and be part of the knowledge revolution from day one. Early members will receive:</p>
+            <ul class="benefits-list">
+                <li><i class="fas fa-crown"></i>Lifetime Founding Member status</li>
+                <li><i class="fas fa-bolt"></i>Early access to beta features</li>
+                <li><i class="fas fa-star"></i>Special recognition in our community</li>
+            </ul>
+        </div>
+        <form class="waitlist-form">
+            <div class="form-group">
+                <input type="text" id="name" required placeholder=" ">
+                <label for="name">Your Name</label>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" required placeholder=" ">
+                <label for="email">Email Address</label>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="form-group">
+                <select id="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="student">Student</option>
+                    <option value="educator">Educator</option>
+                    <option value="academic">Academic</option>
+                    <option value="professional">Professional</option>
+                    <option value="researcher">Biologists</option>
+                    <option value="developer">Chemists</option>
+                    <option value="designer">Physicists</option>
+                    <option value="enthusiast">Astronomers</option>
+                    <option value="hobbyist">Mathematician</option>
+                    <option value="scientist">Computer Scientists</option>
+                    <option value="engineer">Psychologists</option>
+                    <option value="artist">Sociologists</option>
+                    <option value="writer">Anthropologists</option>
+                    <option value="researcher">Historians</option>
+                    <option value="educator">Economists</option>
+                    <option value="developer">Engineers</option>
+                    <option value="designer">Medical Scientists</option>
+                    <option value="enthusiast">Environmental Scientists</option>
+                    <option value="hobbyist">Geologists</option>
+                    <option value="scientist">Geographers</option>
+                    <option value="engineer">Agricultural Scientists</option>
+                    <option value="other">Other</option>
+                </select>
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <button type="submit" class="submit-btn">
+                Join Waitlist
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            <p class="form-notice">Early access is limited. <span class="highlight">Reserve your spot today!</span></p>
+        </form>
+    </div>
+</section>
 
         <section id="contribute" class="contribute">
             <h2>Be Part of the Revolution</h2>
@@ -99,7 +231,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Contact</h4>
-                <a href="mailto:info@brainpedia.org">info@brainpedia.org</a>
+                <a href="mailto:info@brainpedia.org">alvarodlz1999@gmail.com</a>
             </div>
             <div class="footer-section">
                 <h4>Follow Us</h4>
@@ -114,5 +246,6 @@
             <p>© 2025 Brainpedia. All rights reserved.</p>
         </div>
     </footer>
+    <script src="../opensource-scripts/brainpedia-scripts.js"></script>
 </body>
 </html>
