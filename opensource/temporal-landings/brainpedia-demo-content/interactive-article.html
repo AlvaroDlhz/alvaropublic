@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre la Electrodinámica de los Cuerpos en Movimiento - A. Einstein</title>
+    <link rel="stylesheet" href="../../opensource-styles/brainpedia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                packages: ['base', 'ams', 'noerrors', 'noundefined']
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        /* Estilos específicos para el artículo */
+        .article-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .main-content {
+            flex: 1;
+            max-width: 900px;
+        }
+
+        .table-of-contents {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+            background: rgba(42, 157, 143, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            width: 300px;
+            align-self: flex-start;
+        }
+
+        .toc-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .toc-list {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .toc-list a:hover {
+            color: var(--secondary-color);
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .article-metadata {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .article-authors {
+            margin: 1rem 0;
+        }
+
+        .article-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .subsection-title {
+            color: var(--secondary-color);
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .interactive-element {
+            background: rgba(42, 157, 143, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed var(--primary-color);
+        }
+
+        .figure {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .figure-caption {
+            margin-top: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .citation {
+            background: #f8f9fa;
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        .reference-list {
+            padding-left: 2rem;
+        }
+
+        .reference-list li {
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .article-container {
+                padding: 1rem;
+                flex-direction: column;
+            }
+
+            .table-of-contents {
+                position: relative;
+                top: 0;
+                width: 100%;
+            }
+
+            .article-title {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .interactive-element {
+                padding: 1rem;
+                min-height: 200px;
+            }
+        }
+
+        /* Estilos adicionales para ecuaciones */
+        .equation-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .equation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50px;
+        }
+
+        .footnote {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .theorem {
+            background: rgba(42, 157, 143, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        /* Estilos para notas al pie */
+        .footnotes {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .footnotes-list {
+            padding-left: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Estilos para citaciones */
+        .quote {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(42, 157, 143, 0.05);
+            border-left: 4px solid var(--primary-color);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="article-container">
+        <nav class="table-of-contents">
+            <h2 class="toc-title">Contenido</h2>
+            <ul class="toc-list">
+                <li><a href="#resumen">Resumen</a></li>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#kinematica">I. Parte Cinemática</a>
+                    <ul>
+                        <li><a href="#simultaneidad">§1. Definición de Simultaneidad</a></li>
+                        <li><a href="#relatividad">§2. Sobre la Relatividad de Longitudes y Tiempos</a></li>
+                        <li><a href="#transformacion">§3. Teoría de la Transformación de Coordenadas</a></li>
+                        <li><a href="#significado">§4. Significado Físico de las Ecuaciones</a></li>
+                        <li><a href="#composicion">§5. Composición de Velocidades</a></li>
+                    </ul>
+                </li>
+                <li><a href="#electrodinamica">II. Parte Electrodinámica</a>
+                    <ul>
+                        <li><a href="#transformacion-maxwell">§6. Transformación de las Ecuaciones de Maxwell-Hertz</a></li>
+                        <li><a href="#doppler">§7. Teoría del Principio Doppler y de la Aberración</a></li>
+                        <li><a href="#energia">§8. Transformación de la Energía de los Rayos de Luz</a></li>
+                        <li><a href="#maxwell-conveccion">§9. Transformación con Corrientes de Convección</a></li>
+                        <li><a href="#electron">§10. Dinámica del Electrón</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <!-- Encabezado del artículo -->
+            <header class="article-header">
+                <h1 class="article-title">Sobre la Electrodinámica de los Cuerpos en Movimiento</h1>
+                <div class="article-metadata">
+                    <div class="article-authors">
+                        <strong>Autor:</strong> Albert Einstein¹
+                    </div>
+                    <div class="article-affiliations">
+                        ¹Oficina de Patentes, Berna, Suiza
+                    </div>
+                    <div class="article-dates">
+                        <p>Recibido: 30 de junio, 1905 | Publicado: Annalen der Physik, 1905</p>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Resumen -->
+            <section id="resumen" class="article-section">
+                <h2 class="section-title">Resumen</h2>
+                <p>It is shown that the introduction of a "luminiferous ether" will prove to be superfluous inasmuch as the view here to be developed will not require an "absolutely stationary space" provided with special properties, nor assign a velocity-vector to a point of the empty space in which electromagnetic processes take place. The theory is based on two postulates: the principle of relativity and the constancy of the velocity of light in empty space.</p>
+                
+                <h3 class="subsection-title">Keywords</h3>
+                <p>special relativity, electrodynamics, light velocity, space-time, Lorentz transformations</p>
+            </section>
+
+            <!-- Introducción -->
+            <section id="introduccion" class="article-section">
+                <h2 class="section-title">Introduction</h2>
+                <p>It is known that Maxwell's electrodynamics—as usually understood at the present time—when applied to moving bodies, leads to asymmetries which do not appear to be inherent in the phenomena. Take, for example, the reciprocal electrodynamic action of a magnet and a conductor. The observable phenomenon here depends only on the relative motion of the conductor and the magnet, whereas the customary view draws a sharp distinction between the two cases in which either the one or the other of these bodies is in motion.</p>
+                
+                <div class="interactive-element">
+                    [Interactive Visualization 1: Demonstration of magnet and conductor experiment, showing the equivalence of reference frames]
+                </div>
+
+                <p>Examples of this sort, together with the unsuccessful attempts to discover any motion of the earth relatively to the "light medium," suggest that the phenomena of electrodynamics as well as of mechanics possess no properties corresponding to the idea of absolute rest.</p>
+
+                <div class="theorem">
+                    <p>The same laws of electrodynamics and optics will be valid for all frames of reference for which the equations of mechanics hold good.</p>
+                </div>
+            </section>
+
+            <!-- Cinemática -->
+            <section id="cinematica" class="article-section">
+                <h2 class="section-title">I. Kinematical Part</h2>
+                
+                <h3 id="simultaneidad" class="subsection-title">§1. Definition of Simultaneity</h3>
+                <p>Let us take a system of co-ordinates in which the equations of Newtonian mechanics hold good. If a material point is at rest relatively to this system of co-ordinates, its position can be defined relatively thereto by the employment of rigid standards of measurement and the methods of Euclidean geometry, and can be expressed in Cartesian co-ordinates.</p>
+
+                <div class="equation-container">
+                    <div class="equation">
+                        $$t_{\rm B}-t_{\rm A}=t'_{\rm A}-t_{\rm B}$$
+                    </div>
+                </div>
+
+                <p>We assume that this definition of synchronism is free from contradictions, and possible for any number of points; and that the following relations are universally valid:</p>
+                <ul>
+                    <li>If the clock at B synchronizes with the clock at A, the clock at A synchronizes with the clock at B.</li>
+                    <li>If the clock at A synchronizes with the clock at B and also with the clock at C, the clocks at B and C also synchronize with each other.</li>
+                </ul>
+
+                <div class="equation-container">
+                    <div class="equation">
+                        $$\frac{2{\rm AB}}{t'_A-t_A}=c$$
+                    </div>
+                </div>
+                
+                <h3 id="relatividad" class="subsection-title">§2. On the Relativity of Lengths and Times</h3>
+                <p>The following reflexions are based on the principle of relativity and on the principle of the constancy of the velocity of light. These two principles we define as follows:</p>
+                
+                <div class="theorem">
+                    <ol>
+                        <li>The laws by which the states of physical systems undergo change are not affected, whether these changes of state be referred to the one or the other of two systems of co-ordinates in uniform translatory motion.</li>
+                        <li>Any ray of light moves in the "stationary" system of co-ordinates with the determined velocity c, whether the ray be emitted by a stationary or by a moving body.</li>
+                    </ol>
+                </div>
+
+                <div class="equation-container">
+                    <div class="equation">
+                        $${\rm velocity}=\frac{{\rm light\ path}}{{\rm time\ interval}}$$
+                    </div>
+                </div>
+
+                <h3 id="transformacion" class="subsection-title">§3. Teoría de la Transformación de Coordenadas</h3>
+                <p>Consideremos una varilla rígida en reposo de longitud L, medida por un observador en reposo respecto a ella. Cuando esta varilla se mueve uniformemente con velocidad v respecto al observador, su longitud medida en el marco de referencia del observador será diferente, dando lugar al fenómeno de contracción de Lorentz.</p>
+
+                <div class="figure">
+                    <img src="placeholder-image.jpg" alt="Contracción de Lorentz">
+                    <p class="figure-caption">Figura 1: Ilustración de la contracción de Lorentz para diferentes velocidades relativas</p>
+                </div>
+            </section>
+
+            <!-- Electrodinámica -->
+            <section id="electrodinamica" class="article-section">
+                <h2 class="section-title">3. Electrodinámica</h2>
+                
+                <h3 id="transformacion" class="subsection-title">3.1 Transformación del Campo Eléctrico</h3>
+                <p>Las ecuaciones de transformación para el campo eléctrico y magnético se pueden derivar considerando cómo las fuerzas electromagnéticas deben transformarse para mantener la invariancia de las ecuaciones de Maxwell en diferentes marcos de referencia inerciales.</p>
+
+                <div class="interactive-element">
+                    [Visualización Interactiva 3: Transformación de campos electromagnéticos entre marcos de referencia]
+                </div>
+
+                <h3 id="electron" class="subsection-title">3.2 Dinámica del Electrón</h3>
+                <p>La masa de un cuerpo es una medida de su contenido de energía; si la energía cambia en una cantidad E, la masa cambia en la misma dirección por una cantidad E/c², donde c es la velocidad de la luz en el vacío.</p>
+            </section>
+
+            <!-- Conclusiones -->
+            <section id="conclusiones" class="article-section">
+                <h2 class="section-title">4. Conclusiones</h2>
+                <p>La introducción de un "éter luminífero" se demuestra superflua, ya que la teoría desarrollada aquí no requiere un espacio absolutamente estacionario dotado de propiedades especiales. Las ecuaciones de la electrodinámica mantienen su forma en diferentes marcos de referencia inerciales, y la velocidad de la luz permanece constante para todos los observadores.</p>
+                <p>La teoría conduce a una nueva comprensión de la naturaleza del espacio y el tiempo, unificándolos en un único continuo espacio-temporal que más tarde sería formalizado por Minkowski.</p>
+            </section>
+
+            <!-- Referencias -->
+            <section id="referencias" class="article-section">
+                <h2 class="section-title">5. Referencias</h2>
+                <ol class="reference-list">
+                    <li class="citation">Einstein, A. (1905). Zur Elektrodynamik bewegter Körper. Annalen der Physik, 322(10), 891-921.</li>
+                    <li class="citation">Maxwell, J. C. (1865). A Dynamical Theory of the Electromagnetic Field. Philosophical Transactions of the Royal Society of London, 155, 459-512.</li>
+                    <li class="citation">Lorentz, H. A. (1904). Electromagnetic phenomena in a system moving with any velocity smaller than that of light. Proceedings of the Royal Netherlands Academy of Arts and Sciences, 6, 809-831.</li>
+                </ol>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Resaltar la sección actual al hacer scroll
+            const sections = document.querySelectorAll('.article-section');
+            const tocLinks = document.querySelectorAll('.toc-list a');
+
+            function highlightCurrentSection() {
+                let currentSection = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= sectionTop - 100) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                tocLinks.forEach(link => {
+                    link.style.fontWeight = link.getAttribute('href').slice(1) === currentSection ? 'bold' : 'normal';
+                });
+            }
+
+            window.addEventListener('scroll', highlightCurrentSection);
+        });
+    </script>
+</body>
+</html>
