@@ -121,3 +121,76 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// ...existing code...
+
+// Profit Margins Chart
+const profitCtx = document.getElementById('profitChart').getContext('2d');
+new Chart(profitCtx, {
+    type: 'line',
+    data: {
+        labels: ['2003', '2008', '2013', '2018', '2023'],
+        datasets: [{
+            label: 'Scientific Publishers',
+            data: [36, 37, 39, 38, 40],
+            borderColor: '#FF6B6B',
+            tension: 0.1
+        },
+        {
+            label: 'Tech Industry',
+            data: [15, 18, 21, 22, 25],
+            borderColor: '#4CAF50',
+            tension: 0.1
+        },
+        {
+            label: 'Global 500 Average',
+            data: [10, 11, 10, 12, 11],
+            borderColor: '#2196F3',
+            tension: 0.1
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Profit Margin (%)'
+                }
+            }
+        }
+    }
+});
+
+// Alternative Uses Chart
+const altUsesCtx = document.getElementById('alternativeUsesChart').getContext('2d');
+new Chart(altUsesCtx, {
+    type: 'bar',
+    data: {
+        labels: ['Research Grants', 'Open Labs', 'Scholarships', 'Open Access'],
+        datasets: [{
+            label: 'Potential Annual Impact (Millions $)',
+            data: [5000, 4000, 6000, 4600],
+            backgroundColor: [
+                '#4CAF50',
+                '#2196F3',
+                '#FFC107',
+                '#9C27B0'
+            ]
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Million USD'
+                }
+            }
+        }
+    }
+});

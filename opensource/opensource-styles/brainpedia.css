@@ -975,3 +975,32 @@ body {
     margin-top: 2rem;
     text-align: center;
 }
+
+
+.profit-analysis-section {
+    background: var(--bg-light);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.impact-box {
+    background: linear-gradient(135deg, #6b66ff 0%, #5353ff 100%);
+    padding: 1.5rem;
+}
+
+.impact-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.impact-box li {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.chart-wrapper {
+    min-height: 300px;
+}
