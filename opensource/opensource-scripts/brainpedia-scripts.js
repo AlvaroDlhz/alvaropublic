@@ -67,3 +67,57 @@ document.addEventListener('DOMContentLoaded', function() {
         waitlistForm.reset();
     });
 });
+
+
+// Add Chart.js CDN to your HTML file first:
+// <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mathematics Performance Chart
+    const mathCtx = document.getElementById('mathChart').getContext('2d');
+    new Chart(mathCtx, {
+        type: 'bar',
+        data: {
+            labels: ['OECD Average', 'Chile', 'Uruguay', 'Mexico', 'Colombia', 'Peru'],
+            datasets: [{
+                label: 'Math Score (PISA 2022)',
+                data: [472, 412, 418, 409, 402, 400],
+                backgroundColor: ['#4CAF50', '#FFA726', '#FFA726', '#FFA726', '#FFA726', '#FFA726']
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    min: 350,
+                    max: 500
+                }
+            }
+        }
+    });
+
+    // Reading Performance Chart
+    const readingCtx = document.getElementById('readingChart').getContext('2d');
+    new Chart(readingCtx, {
+        type: 'bar',
+        data: {
+            labels: ['OECD Average', 'Chile', 'Mexico', 'Colombia', 'Peru', 'Argentina'],
+            datasets: [{
+                label: 'Reading Score (PISA 2022)',
+                data: [476, 448, 415, 409, 404, 402],
+                backgroundColor: ['#4CAF50', '#FFA726', '#FFA726', '#FFA726', '#FFA726', '#FFA726']
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: false,
+                    min: 350,
+                    max: 500
+                }
+            }
+        }
+    });
+});

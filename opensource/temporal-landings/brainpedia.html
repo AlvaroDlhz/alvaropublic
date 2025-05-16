@@ -168,7 +168,30 @@
             </ul>
 
             <h3>Our Mission</h3>
-            <p>To transform how we document and share knowledge by combining academic precision with cutting-edge interactive technology, making complex topics more engaging and easier to understand.</p>
+            <p>To revolutionize access to knowledge in Latin America, transforming how we share and document educational resources. By combining academic excellence with cutting-edge technology, we aim to break the poverty cycle through democratized access to quality education. Our platform bridges the gap between academic institutions and underserved communities, making complex knowledge accessible and engaging for everyone, regardless of their socioeconomic background.</p>
+
+            <div class="statistics-section">
+        <h3>The Educational Gap in Latin America</h3>
+        <p class="stats-description">PISA scores comparison between OECD countries and Latin America (2022 data):</p>
+        
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <h4>Mathematics Performance</h4>
+                <canvas id="mathChart"></canvas>
+                <p class="chart-note">Latin American countries score on average 90 points below OECD mean</p>
+            </div>
+            
+            <div class="chart-wrapper">
+                <h4>Reading Performance</h4>
+                <canvas id="readingChart"></canvas>
+                <p class="chart-note">Over 50% of students in Latin America don't reach basic proficiency</p>
+            </div>
+        </div>
+
+        <div class="stats-highlight">
+            <p><strong>Did you know?</strong> Improving these scores by just 50 points could increase GDP growth by 1% annually</p>
+        </div>
+    </div>
 
             <div class="demo-link">
                 <h3>See it in action</h3>
@@ -366,6 +389,7 @@
         <div class="footer-bottom">
             <p>© 2025 Brainpedia. All rights reserved.</p>
         </div>
-    </footer>    
+    </footer>   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
 </body>
 </html>
