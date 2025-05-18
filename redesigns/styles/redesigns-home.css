@@ -91,6 +91,9 @@ body::before {
     border: 1px solid var(--glass-border);
     border-radius: var(--radius);
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
     transition: transform var(--transition), box-shadow var(--transition);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -99,7 +102,13 @@ body::before {
 
 .bento-item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 40px var(--glass-shadow);
+    box-shadow: 0 10px 30px -10px var(--glass-shadow);
+}
+
+/* Asegúrate que los elementos dentro del enlace mantengan sus estilos */
+.bento-item article {
+    height: 100%;
+    width: 100%;
 }
 
 .image-wrapper {
