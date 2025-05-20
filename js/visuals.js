@@ -39,3 +39,4 @@
     };
     emailjs.send("service_81xkq0a", "template_45ha295", params).then(alert("Email sent successfully!"))
 }
+
