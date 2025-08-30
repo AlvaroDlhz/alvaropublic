@@ -29,6 +29,7 @@ body{
     background-color: #07000f;
     color: #f5f5f5;
     overflow-x: hidden;
+    padding-left: 250px;
 }
 .header{
     background-color: #ff6bce00;
@@ -508,9 +509,6 @@ body{
     width: 1.5rem;
     height: 1.5rem;
 }
-
-
-
 .footer {
     padding: 3rem 1rem;
     display: flex;

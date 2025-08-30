@@ -40,3 +40,25 @@
     emailjs.send("service_81xkq0a", "template_45ha295", params).then(alert("Email sent successfully!"))
 }
 
+
+
+//funcion para el menu hamburguesa
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('#hamburger');
+    const navMenu = document.querySelector('.indice-menu-nav');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Cerrar el menú cuando se hace clic en un enlace
+        document.querySelectorAll('.indice-menu-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+});
