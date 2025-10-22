@@ -7,7 +7,9 @@
     --color-text-low:#f5f5f531;
     --color-subtitle: #7a7a7a;
 }
-
+::-webkit-scrollbar {
+    width: 0;
+}
 * {
     margin: 0;
     padding: 0;
@@ -120,14 +122,76 @@ body {
 }
 
 .main{
+    display: grid;
+    grid-template-columns: repeat (6, 1fr);
+    grid-template-rows: repeat (5, 1fr);
+    grid-template-areas: "section-one section-two section-three section-five section-five section-five"
+                         "section-one section-two section-three section-five section-five section-five"
+                         "section-four section-four section-four section-five section-five section-five"
+                         "section-four section-four section-four section-five section-five section-five"
+                         "section-four section-four section-four section-five section-five section-five";
+    gap: 5px;
     margin-top: 3.5rem;
     background-color: rgba(0, 255, 255, 0) ;
     width: 98vw;
     height: 93vh;
     border:1px solid #ffffff0c;
     border-radius: 10px;
+    padding: 1rem;
+    overflow-y: hidden;
 }
 
 .about-img{
     width: 10rem;
+}
+
+.main-section-one{
+    grid-area: section-one;
+    padding: 2rem;
+    background-color: rgba(65, 105, 225, 0);
+    border: 1px solid #ffffff0c;
+    border-radius: 10px;
+}
+.main-section-two{
+    grid-area: section-two;
+    padding: 2rem;
+    background-color: rgba(255, 99, 71, 0);
+    border: 1px solid #ffffff0c;
+    border-radius: 10px;
+}
+.main-section-three{
+    grid-area: section-three;
+    padding: 2rem;
+    background-color: rgba(255, 166, 0, 0);
+    border: 1px solid #ffffff0c;
+    border-radius: 10px;
+}
+.main-section-four{
+    grid-area: section-four;
+    padding: 2rem;
+    background-color: rgba(153, 205, 50, 0);
+    border: 1px solid #ffffff0c;
+    border-radius: 10px;
+}
+.main-section-five{
+    grid-area: section-five;
+    padding: 2rem 4rem;
+    background-color: rgba(255, 20, 145, 0);
+    border: 1px solid #ffffff0c;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+.main-section-five h2{
+    text-align: center;
+}
+.landingphoto{
+    width: 70%;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    filter: grayscale(100%);
+}
+.landingphoto:hover{
+    filter: grayscale(0%);
+    transition: 0.1s;
 }
