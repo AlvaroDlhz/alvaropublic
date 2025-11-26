@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette - Alvaro De la Hoz</title>
+
+    <!-- SEO & Caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/roulette.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="apps.html" class="logo">
+                <img src="assets/images/suminagashi.jpg" alt="AD" class="logo-img">
+                <span class="logo-text">Roulette</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="apps.html" class="nav-link">Back to Apps</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="roulette-main">
+        <div class="roulette-container">
+            <!-- Wheel Section -->
+            <div class="wheel-section">
+                <div class="wheel-wrapper">
+                    <div class="pointer"></div>
+                    <canvas id="roulette-wheel" width="500" height="500"></canvas>
+                    <button id="spin-btn" class="spin-btn">SPIN</button>
+                </div>
+            </div>
+
+            <!-- Controls Section -->
+            <div class="controls-section">
+                <!-- Tabs -->
+                <div class="tabs-container">
+                    <div class="tabs-list" id="tabs-list">
+                        <!-- Tabs will be injected here -->
+                    </div>
+                    <button id="add-tab-btn" class="add-tab-btn" title="Add new tab">+</button>
+                </div>
+
+                <!-- Input Area -->
+                <div class="input-area">
+                    <input type="text" id="option-input" placeholder="Type an option and press Enter..."
+                        autocomplete="off">
+                    <button id="add-option-btn" class="add-option-btn">Add</button>
+                </div>
+
+                <!-- Options List -->
+                <div class="options-list-container">
+                    <ul id="options-list" class="options-list">
+                        <!-- Options will be injected here -->
+                    </ul>
+                </div>
+
+                <div class="result-display" id="result-display">
+                    <!DOCTYPE html>
+                    <html lang="en">
+
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Roulette - Alvaro De la Hoz</title>
+
+                        <!-- SEO & Caching -->
+                        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+                        <meta http-equiv="Pragma" content="no-cache" />
+                        <meta http-equiv="Expires" content="0" />
+
+                        <!-- Fonts -->
+                        <link rel="preconnect" href="https://fonts.googleapis.com">
+                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                        <link
+                            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+                            rel="stylesheet">
+
+                        <!-- Styles -->
+                        <link rel="stylesheet" href="styles/index.css">
+                        <link rel="stylesheet" href="styles/roulette.css">
+                    </head>
+
+                    <body>
+                        <!-- Navigation -->
+                        <nav class="navbar" id="navbar">
+                            <div class="nav-container">
+                                <a href="apps.html" class="logo">
+                                    <img src="assets/images/suminagashi.jpg" alt="AD" class="logo-img">
+                                    <span class="logo-text">Roulette</span>
+                                </a>
+
+                                <ul class="nav-links">
+                                    <li><a href="apps.html" class="nav-link">Back to Apps</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+
+                        <!-- Main Content -->
+                        <main class="roulette-main">
+                            <div class="roulette-container">
+                                <!-- Wheel Section -->
+                                <div class="wheel-section">
+                                    <div class="wheel-wrapper">
+                                        <div class="pointer"></div>
+                                        <canvas id="roulette-wheel" width="500" height="500"></canvas>
+                                        <button id="spin-btn" class="spin-btn">SPIN</button>
+                                    </div>
+                                </div>
+
+                                <!-- Controls Section -->
+                                <div class="controls-section">
+                                    <!-- Tabs -->
+                                    <div class="tabs-container">
+                                        <div class="tabs-list" id="tabs-list">
+                                            <!-- Tabs will be injected here -->
+                                        </div>
+                                        <button id="add-tab-btn" class="add-tab-btn" title="Add new tab">+</button>
+                                    </div>
+
+                                    <!-- Input Area -->
+                                    <div class="input-area">
+                                        <input type="text" id="option-input"
+                                            placeholder="Type an option and press Enter..." autocomplete="off">
+                                        <button id="add-option-btn" class="add-option-btn">Add</button>
+                                    </div>
+
+                                    <!-- Options List -->
+                                    <div class="options-list-container">
+                                        <ul id="options-list" class="options-list">
+                                            <!-- Options will be injected here -->
+                                        </ul>
+                                    </div>
+
+                                    <div class="result-display" id="result-display">
+                                        <!-- Result will appear here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+
+                        <!-- Context Menu for Tabs -->
+                        <div id="context-menu" class="context-menu">
+                            <div class="context-menu-item" id="rename-tab-action">Rename</div>
+                            <div class="context-menu-item delete" id="delete-tab-action">Delete</div>
+                        </div>
+
+                        <!-- Winner Modal -->
+                        <div id="winner-modal" class="modal">
+                            <div class="modal-content">
+                                <button class="close-modal-btn">&times;</button>
+                                <h2>We have a winner!</h2>
+                                <div class="winner-result" id="winner-result"></div>
+                                <button class="claim-btn">Awesome!</button>
+                            </div>
+                        </div>
+
+                        <!-- Scripts -->
+                        <script src="js/roulette.js"></script>
+                    </body>
+
+                    </html>

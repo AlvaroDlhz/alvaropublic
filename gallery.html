@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery - Alvaro De la Hoz</title>
+
+    <!-- SEO & Caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="description" content="Art Gallery of Alvaro De la Hoz - A collection of paintings and digital art.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+    <style>
+        /* Gallery specific overrides */
+        .gallery-page-header {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .gallery-page-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #aaa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gallery-page-subtitle {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/suminagashi.jpg" alt="AD" class="logo-img">
+                <span class="logo-text">Alvaro De la Hoz</span>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html#person" class="nav-link">Person</a></li>
+                <li><a href="index.html#artist" class="nav-link">Artist</a></li>
+                <li><a href="index.html#developer" class="nav-link">Developer</a></li>
+                <li><a href="index.html#contact" class="nav-link contact-btn">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#person" class="mobile-nav-link">Person</a></li>
+            <li><a href="index.html#artist" class="mobile-nav-link">Artist</a></li>
+            <li><a href="index.html#developer" class="mobile-nav-link">Developer</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="gallery-page-header fade-in-up">
+            <div class="container">
+                <h1 class="gallery-page-title">Art Gallery</h1>
+                <p class="gallery-page-subtitle">A collection of my paintings, digital art, and creative experiments.
+                </p>
+            </div>
+        </section>
+
+        <section class="section artist-section" style="padding-top: 0;">
+            <div class="container">
+                <div class="gallery-grid">
+                    <!-- Gallery Items -->
+                    <article class="gallery-item fade-in-up">
+                        <img src="assets/images/image.png" alt="Artwork 1" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Number 1</h3>
+                            <p>Acrylic Painting 2025</p>
+                        </div>
+                    </article>
+                    <article class="gallery-item fade-in-up" style="transition-delay: 0.1s">
+                        <img src="assets/images/suminagashi.jpg" alt="Artwork 2" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Number 2</h3>
+                            <p>Acrylic Painting 2025</p>
+                        </div>
+                    </article>
+                    <article class="gallery-item fade-in-up" style="transition-delay: 0.2s">
+                        <img src="assets/images/image.png" alt="Artwork 3" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Number 3</h3>
+                            <p>Acrylic Painting 2025</p>
+                        </div>
+                    </article>
+                    <article class="gallery-item fade-in-up" style="transition-delay: 0.3s">
+                        <img src="assets/images/image.png" alt="Artwork 4" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Number 4</h3>
+                            <p>Acrylic Painting 2025</p>
+                        </div>
+                    </article>
+                    <article class="gallery-item fade-in-up" style="transition-delay: 0.4s">
+                        <img src="assets/images/suminagashi.jpg" alt="Artwork 5" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Number 5</h3>
+                            <p>Acrylic Painting 2025</p>
+                        </div>
+                    </article>
+                    <article class="gallery-item fade-in-up" style="transition-delay: 0.5s">
+                        <img src="assets/images/image.png" alt="Artwork 6" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Number 6</h3>
+                            <p>Acrylic Painting 2025</p>
+                        </div>
+                    </article>
+                    <article class="gallery-item fade-in-up" style="transition-delay: 0.6s">
+                        <img src="assets/images/suminagashi.jpg" alt="Artwork 7" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Number 7</h3>
+                            <p>Acrylic Painting 2025</p>
+                        </div>
+                    </article>
+                    <article class="gallery-item fade-in-up" style="transition-delay: 0.7s">
+                        <img src="assets/images/image.png" alt="Artwork 8" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Number 8</h3>
+                            <p>Acrylic Painting 2025</p>
+                        </div>
+                    </article>
+                    <article class="gallery-item fade-in-up" style="transition-delay: 0.8s">
+                        <img src="assets/images/suminagashi.jpg" alt="Artwork 9" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Number 9</h3>
+                            <p>Acrylic Painting 2025</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="text-align: center; margin-top: 4rem;">
+                    <a href="index.html#contact" class="btn btn-primary">Interested in a piece?</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Alvaro De la Hoz. All rights reserved.</p>
+            <p class="footer-note">👻</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/visuals.js"></script>
+</body>
+
+</html>
