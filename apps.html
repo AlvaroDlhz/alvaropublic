@@ -42,6 +42,12 @@
                 <span class="logo-text">Alvaro De la Hoz</span>
             </a>
 
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="app-search" placeholder="Search apps..." autocomplete="off">
+                <div id="search-suggestions" class="suggestions-dropdown"></div>
+            </div>
+
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -72,7 +78,7 @@
             <div class="container">
                 <div class="section-header fade-in-up">
                     <span class="section-label">Open Source</span>
-                    <h2 class="section-title">Applications</h2>
+                    <h2 class="section-title">Apps</h2>
                     <p style="color: var(--color-text-secondary); max-width: 600px; margin-bottom: var(--spacing-lg);">
                         A collection of open source tools and applications I'm building.
                     </p>
@@ -83,13 +89,13 @@
                     <article class="project-card fade-in-up">
                         <div class="project-content">
                             <span class="project-type">Utility</span>
-                            <h3>Roulette App</h3>
+                            <h3>Roulette</h3>
                             <p>A simple and fun roulette application for making random decisions.</p>
                             <ul class="tech-stack">
                                 <li>HTML/CSS</li>
                                 <li>JavaScript</li>
                             </ul>
-                            <a href="#" class="project-link">View App <span class="arrow">→</span></a>
+                            <a href="#" class="project-link">Try Roulette <span class="arrow">→</span></a>
                         </div>
                         <div class="project-image">
                             <img src="assets/images/image.png" alt="Roulette App" class="img-roulette">
@@ -117,7 +123,7 @@
                     <article class="project-card fade-in-up">
                         <div class="project-content">
                             <span class="project-type">Management</span>
-                            <h3>Inventory App</h3>
+                            <h3>Inventory</h3>
                             <p>Keep track of your items with this clean and efficient inventory system.</p>
                             <ul class="tech-stack">
                                 <li>HTML/CSS</li>
@@ -143,6 +149,7 @@
 
     <!-- Scripts -->
     <script src="js/visuals.js"></script>
+    <script src="js/apps-search.js"></script>
 </body>
 
 </html>
