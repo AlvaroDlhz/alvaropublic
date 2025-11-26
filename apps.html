@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source Apps - Alvaro De la Hoz</title>
+
+    <!-- SEO & Caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="description" content="Open Source Applications by Alvaro De la Hoz.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "CPlc0C4SnHiGgctRZ"
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/suminagashi.jpg" alt="AD" class="logo-img">
+                <span class="logo-text">Alvaro De la Hoz</span>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html#person" class="nav-link">Person</a></li>
+                <li><a href="index.html#artist" class="nav-link">Artist</a></li>
+                <li><a href="index.html#developer" class="nav-link">Developer</a></li>
+                <li><a href="index.html#contact" class="nav-link contact-btn">Get in Touch</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#person" class="mobile-nav-link">Person</a></li>
+            <li><a href="index.html#artist" class="mobile-nav-link">Artist</a></li>
+            <li><a href="index.html#developer" class="mobile-nav-link">Developer</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section" style="padding-top: 150px;">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-label">Open Source</span>
+                    <h2 class="section-title">Applications</h2>
+                    <p style="color: var(--color-text-secondary); max-width: 600px; margin-bottom: var(--spacing-lg);">
+                        A collection of open source tools and applications I'm building.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Roulette App -->
+                    <article class="project-card fade-in-up">
+                        <div class="project-content">
+                            <span class="project-type">Utility</span>
+                            <h3>Roulette App</h3>
+                            <p>A simple and fun roulette application for making random decisions.</p>
+                            <ul class="tech-stack">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <a href="#" class="project-link">View App <span class="arrow">→</span></a>
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/images/image.png" alt="Roulette App" class="img-roulette">
+                        </div>
+                    </article>
+
+                    <!-- Pomodoro Timer -->
+                    <article class="project-card fade-in-up">
+                        <div class="project-content">
+                            <span class="project-type">Productivity</span>
+                            <h3>Pomodoro Timer</h3>
+                            <p>Focus on your work with this customizable Pomodoro timer.</p>
+                            <ul class="tech-stack">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <a href="#" class="project-link">View App <span class="arrow">→</span></a>
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/images/image.png" alt="Pomodoro Timer" class="img-pomodoro">
+                        </div>
+                    </article>
+
+                    <!-- Inventory App -->
+                    <article class="project-card fade-in-up">
+                        <div class="project-content">
+                            <span class="project-type">Management</span>
+                            <h3>Inventory App</h3>
+                            <p>Keep track of your items with this clean and efficient inventory system.</p>
+                            <ul class="tech-stack">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <a href="#" class="project-link">View App <span class="arrow">→</span></a>
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/images/image.png" alt="Inventory App" class="img-inventory">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Alvaro De la Hoz. All rights reserved.</p>
+            <p class="footer-note">👻</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/visuals.js"></script>
+</body>
+
+</html>
