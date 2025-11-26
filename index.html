@@ -1,272 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvaro De la hoz</title>
+    <title>Alvaro De la Hoz | Creative Developer & Artist</title>
+
+    <!-- SEO & Caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="description" content="Portfolio of Alvaro De la Hoz - Creative Developer, Artist, and Designer.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/index.css">
 
-    <!-- Evita cache en navegadores móviles (y de escritorio) -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma"        content="no-cache" />
-    <meta http-equiv="Expires"       content="0" />
-    
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function(){
+        (function () {
             emailjs.init({
-            publicKey: "CPlc0C4SnHiGgctRZ"});
+                publicKey: "CPlc0C4SnHiGgctRZ"
+            });
         })();
     </script>
-    <script src="js/visuals.js"></script> 
 </head>
+
 <body>
-    <header class="header" id="header">
-        <div class="indice">
-            <div class="logo">
-                <a href=""><h1><img src="assets/images/suminagashi.jpg" alt="logo" class="logo-img"></h1></a>
-            </div>
-            <div class="indice-menu-one">
-                <nav class="indice-menu-one-nav" id="main-navigation">
-                    <ul class="indice-menu-list">
-                        <li><a href="#donations" class="header-links">The person</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="indice-menu-two">
-                <nav class="indice-menu-one-nav" id="main-navigation">
-                    <ul class="indice-menu-list">
-                        <li><a href="#donations" class="header-links">The artist</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="indice-menu-three">
-                <nav class="indice-menu-one-nav" id="main-navigation">
-                    <ul class="indice-menu-list">
-                        <li><a href="#donations" class="header-links">The developer</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="indice-menu-four">
-                <nav class="indice-menu-one-nav" id="main-navigation">
-                    <ul class="indice-menu-list">
-                        <li><a href="#donations" class="header-links">The experiences</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="assets/images/suminagashi.jpg" alt="AD" class="logo-img">
+                <span class="logo-text">Alvaro.</span>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="#person" class="nav-link">The Person</a></li>
+                <li><a href="#artist" class="nav-link">The Artist</a></li>
+                <li><a href="#developer" class="nav-link">The Developer</a></li>
+                <li><a href="#contact" class="nav-link contact-btn">Get in Touch</a></li>
+            </ul>
         </div>
-    </header>
-    <main class="main" id="main">
-        <section class="main-section-one">
+    </nav>
 
-        </section>
-        <section class="main-section-two">
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <ul class="mobile-nav-links">
+            <li><a href="#person" class="mobile-nav-link">The Person</a></li>
+            <li><a href="#artist" class="mobile-nav-link">The Artist</a></li>
+            <li><a href="#developer" class="mobile-nav-link">The Developer</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
 
-        </section>
-        <section class="main-section-three">
-
-        </section>
-        <section class="main-section-four">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-        </section>
-        <section class="main-section-five">
-            <h2>Hola, soy Alvaro :)</h2>
-            <br>
-            <img src="assets/images/landingphoto.jpg" alt="" class="landingphoto">
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p> 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ab in, esse, id earum, ipsam dolor magnam eum et asperiores molestiae odit quam quis numquam saepe incidunt dolore deleniti eaque.</p>
-        </section>
-        <!--section class="about-section">
-            <div class="about-section1">
-                <h2 class="main-title">Alvaro De la hoz</h2>
-                <img src="assets/images/landingphoto.jpg" alt="" class="about-img">
-                <h3 class="main-subtitle">CEO & Founder of Doggo<br>Fullstack developer</h3>
-            </div>
-            <div class="about-section2">
-              <p>¡Hola! ¿Qué tal? Estoy construyendo esta página para usarla como portafolio. Si estás viendo esto, es porque entraste a través del enlace en Instagram. ¡Muchas gracias por tu curiosidad! Estoy trabajando en un montón de proyectos interesantes para mejorar el mundo en el que vivimos. ¡Espéralos, que pronto estarán disponibles!</p>
-            </div>
-            <div class="about-section3">
-                <div class="carousel">
-                  <div class="carousel-track">
-                    <!-- Tarjetas ->
-                    <div class="card" data-tooltip="JavaScript - 5 years"><img src="assets/icons/vc-git-svgrepo-com.svg" alt="" class="footer-icon"></div>
-                    <div class="card"><img src="assets/icons/html-124-svgrepo-com.svg" alt="" class="footer-icon"></div>
-                    <div class="card"><img src="assets/icons/css3-02-svgrepo-com.svg" alt="" class="footer-icon"></div>
-                    <div class="card"><img src="assets/icons/js01-svgrepo-com.svg" alt="" class="footer-icon"></div>
-                    <div class="card"><img src="assets/icons/python-127-svgrepo-com.svg" alt="" class="footer-icon"></div>
-                    <div class="card"><img src="assets/icons/postgresql-svgrepo-com.svg" alt="" class="footer-icon"></div>
-                    <div class="card"><img src="assets/icons/reactjs-svgrepo-com.svg" alt="" class="footer-icon"></div>
-                    <div class="card"><img src="assets/icons/tailwind-css-svgrepo-com.svg" alt="" class="footer-icon"></div>
-                    <div class="card"><img src="assets/icons/typescript-svgrepo-com.svg" alt="" class="footer-icon"></div>
-                    <div class="card"><img src="assets/icons/nodejs02-svgrepo-com.svg" alt="" class="footer-icon"></div>
-                    <!-- Puedes agregar más tarjetas según lo necesites ->
-                  </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content fade-in-up">
+                <h1 class="hero-title">
+                    <span class="block-reveal">Creative</span>
+                    <span class="block-reveal">Developer</span>
+                    <span class="block-reveal">& Artist</span>
+                </h1>
+                <p class="hero-subtitle">Crafting digital experiences that merge art with technology.</p>
+                <div class="hero-cta">
+                    <a href="#developer" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
             </div>
-            
-        </section-->
-        <!--section class="donations"> 
-            <div class="donations-title-container">
-                <h2 class="donations-title">Be part of this</h2>
+            <div class="hero-visual parallax" data-speed="0.5">
+                <div class="gradient-sphere"></div>
             </div>
-            <div class="donations-cards">
-                <div class="subscription-card">
-                    <h3 class="subscription-title">Basic Plan</h3>
-                    <p class="subscription-description">Perfect for individuals starting out.</p>
-                    <p class="subscription-price">$5/month</p>
-                    <button class="subscribe-button">Subscribe</button>
-                </div>
-                <div class="subscription-card">
-                    <h3 class="subscription-title">Pro Plan</h3>
-                    <p class="subscription-description">Ideal for professionals and small teams.</p>
-                    <p class="subscription-price">$15/month</p>
-                    <button class="subscribe-button">Subscribe</button>
-                </div>
-                <div class="subscription-card">
-                    <h3 class="subscription-title">Enterprise Plan</h3>
-                    <p class="subscription-description">Best for large organizations.</p>
-                    <p class="subscription-price">$50/month</p>
-                    <button class="subscribe-button">Subscribe</button>
-                </div>
-            </div>
-            
-        </section-->
+        </section>
 
-        <!--section class="contact-section">
-            <div class="about-section4">
-                <h3 class="main-subtitle">Contact me</h3>
-                <div class="contact-form">
-                    <form id="contactForm" class="contact-form">
-                        <input class="contact-input" type="text" id="name" name="name" placeholder="What's your name?" required>
-                        <input class="contact-input" type="email" id="email" name="email" placeholder="Have an email?" required>
-                        <textarea class="contact-input" id="message" name="message" placeholder="Say something cool 😉" rows="5" required></textarea>
-                        <button class="send-contact-bttn" type="submit" onclick="sendEmail()">Send</button>
+        <!-- The Person Section -->
+        <section id="person" class="section person-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-label">01</span>
+                    <h2 class="section-title">The Person</h2>
+                </div>
+
+                <div class="person-grid">
+                    <div class="person-image-container fade-in-left">
+                        <img src="assets/images/landingphoto.jpg" alt="Alvaro De la Hoz" class="person-img">
+                        <div class="image-decoration"></div>
+                    </div>
+                    <div class="person-content fade-in-right">
+                        <h3>Hi, I'm Alvaro :)</h3>
+                        <p>I decided recently that my website would be more than just a typical online portfolio. It's a
+                            space where I can develop my projects and thoughts without worrying about social media
+                            algorithms or the pace dictated by AI these days.</p>
+                        <p>I am passionate about the intersection of creativity and logic. Whether I'm painting on a
+                            canvas or writing code, I strive to create meaningful experiences that resonate with people.
+                        </p>
+
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Years Exp.</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Passion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Artist Section -->
+        <section id="artist" class="section artist-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-label">02</span>
+                    <h2 class="section-title">The Artist</h2>
+                </div>
+
+                <div class="gallery-grid">
+                    <!-- Placeholder for Art Items - Using existing assets where possible -->
+                    <article class="gallery-item fade-in-up">
+                        <img src="assets/images/image.png" alt="Artwork 1" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Abstract Flow</h3>
+                            <p>Digital Art</p>
+                        </div>
+                    </article>
+                    <article class="gallery-item fade-in-up" style="transition-delay: 0.1s">
+                        <img src="assets/images/suminagashi.jpg" alt="Artwork 2" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Suminagashi</h3>
+                            <p>Traditional</p>
+                        </div>
+                    </article>
+                    <article class="gallery-item fade-in-up" style="transition-delay: 0.2s">
+                        <img src="assets/images/image.png" alt="Artwork 3" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Neon Dreams</h3>
+                            <p>Photography</p>
+                        </div>
+                    </article>
+                    <article class="gallery-item fade-in-up" style="transition-delay: 0.3s">
+                        <img src="assets/images/image.png" alt="Artwork 4" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3>Structure</h3>
+                            <p>3D Modeling</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Developer Section -->
+        <section id="developer" class="section developer-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-label">03</span>
+                    <h2 class="section-title">The Developer</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card fade-in-up">
+                        <div class="project-content">
+                            <span class="project-type">Web Development</span>
+                            <h3>My Store</h3>
+                            <p>An e-commerce solution built with modern web technologies.</p>
+                            <ul class="tech-stack">
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                            </ul>
+                            <a href="#" class="project-link">View Project <span class="arrow">→</span></a>
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/images/image.png" alt="My Store Project" class="img-mystore">
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-in-up">
+                        <div class="project-content">
+                            <span class="project-type">Open Source</span>
+                            <h3>Open Source</h3>
+                            <p>Contributions to the developer community and public tools.</p>
+                            <ul class="tech-stack">
+                                <li>Git</li>
+                                <li>Node.js</li>
+                                <li>Community</li>
+                            </ul>
+                            <a href="#" class="project-link">View Project <span class="arrow">→</span></a>
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/images/image.png" alt="Open Source Project" class="img-opensource">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-wrapper fade-in-up">
+                    <div class="contact-info">
+                        <span class="section-label">04</span>
+                        <h2 class="section-title">Get in Touch</h2>
+                        <p>Have a project in mind or just want to say hi? I'm always open to new ideas and
+                            collaborations.</p>
+
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/alvaro-de-la-hoz-9a855a280/" target="_blank"
+                                class="social-link">LinkedIn</a>
+                            <a href="https://github.com/AlvaroDlhz" target="_blank" class="social-link">GitHub</a>
+                            <a href="https://x.com/alvaro_dlhz" target="_blank" class="social-link">X (Twitter)</a>
+                            <a href="https://instagram.com/anxious_overachiever" target="_blank"
+                                class="social-link">Instagram</a>
+                            <a href="https://www.youtube.com/@Alvaro_dlhz" target="_blank"
+                                class="social-link">YouTube</a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" onsubmit="event.preventDefault(); sendEmail();">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" required
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
                     </form>
-                    <p id="formResponse" class="form-response"></p>
                 </div>
             </div>
         </section>
-        <span id="glassmorfism-position"></span-->
     </main>
-    <!--footer class="footer">
-        <div class="footer-title-container">
-            <h2 class="footer-title">Anything else?</h2>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Alvaro De la Hoz. All rights reserved.</p>
+            <p class="footer-note">Designed & Developed with ❤️</p>
         </div>
-        <div class="footer-content1">
-            <a href="https://www.linkedin.com/in/alvaro-de-la-hoz-9a855a280/" target="_blank"><img src="assets/icons/icons8-linkedin.svg" alt="" class="footer-icon"></a>
-        </div>
-        <div class="footer-content2">
-            <a href="https://github.com/AlvaroDlhz" target="_blank"><img src="assets/icons/icons8-github-100.svg" alt="" class="footer-icon"></a>
-        </div>
-        <div class="footer-content3">
-            <a href="https://x.com/alvaro_dlhz" target="_blank"><img src="assets/icons/icons8-x.svg" alt="" class="footer-icon"></a>
-        </div>
-        <div class="footer-content4">
-            <a href="https:/instagram.com/anxious_overachiever" target="_blank"><img src="assets/icons/icons8-instagram.svg" alt="" class="footer-icon"></a>
-        </div>
-        <div class="footer-content5">
-            <a href="https://www.youtube.com/@Alvaro_dlhz" target="_blank"><img src="assets/icons/icons8-youtube.svg" alt="" class="footer-icon"></a>
-        </div>
-        <div class="footer-content6">
-            <a href=""><img src="assets/icons/icons8-behance.svg" alt="" class="footer-icon"></a>
-        </div>
-    </footer-->
+    </footer>
+
+    <!-- Scripts -->
     <script src="js/visuals.js"></script>
 </body>
+
 </html>
