@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doggo - Profile</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Doggo - User Profile">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="doggo.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="doggo-nav">
+        <div class="nav-container">
+            <a href="feed.html" class="doggo-logo">
+                <span class="logo-icon">🐕</span>
+                <span>Doggo</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="feed.html" class="nav-link"><span>🏠</span> Home</a>
+                <a href="profile.html" class="nav-link active"><span>👤</span> Profile</a>
+                <a href="../index.html" class="nav-link"><span>💼</span> Portfolio</a>
+                <a href="profile.html" class="profile-btn">
+                    <img src="https://i.pravatar.cc/150?img=8" alt="Profile" class="profile-avatar-small">
+                    <span>Alex Rivera</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Container -->
+    <div class="profile-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <img src="https://images.unsplash.com/photo-1557683316-973673baf926?w=800&h=200&fit=crop" alt="Cover"
+                class="profile-cover">
+            <div class="profile-info">
+                <img src="https://i.pravatar.cc/150?img=8" alt="Profile" class="profile-avatar">
+                <div class="profile-actions">
+                    <button class="edit-profile-btn">Edit Profile</button>
+                </div>
+                <h1 class="profile-name">Alex Rivera</h1>
+                <p class="profile-handle">@alexrivera</p>
+                <p class="profile-bio">Creative developer • Building cool things on the internet</p>
+
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Posts</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">342</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">189</span>
+                        <span class="stat-label">Following</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Posts -->
+        <div class="user-posts">
+            <!-- Posts will be dynamically generated here -->
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Edit Profile</h2>
+                <button class="modal-close">✕</button>
+            </div>
+
+            <form id="edit-profile-form">
+                <div class="form-group">
+                    <label for="edit-name" class="form-label">Name</label>
+                    <input type="text" id="edit-name" class="form-input" placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-bio" class="form-label">Bio</label>
+                    <textarea id="edit-bio" class="form-textarea" placeholder="Tell us about yourself"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-avatar" class="form-label">Profile Picture URL</label>
+                    <input type="url" id="edit-avatar" class="form-input" placeholder="https://example.com/avatar.jpg">
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-cover" class="form-label">Cover Image URL</label>
+                    <input type="url" id="edit-cover" class="form-input" placeholder="https://example.com/cover.jpg">
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel">Cancel</button>
+                    <button type="button" class="btn-save">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="doggo.js"></script>
+</body>
+
+</html>
