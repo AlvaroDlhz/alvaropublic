@@ -1,5 +1,5 @@
 /* =========================================
-   ROULETTE APP STYLES
+   ROULETTE APP STYLES - ENHANCED
    ========================================= */
 
 .roulette-main {
@@ -17,7 +17,7 @@
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     gap: 2rem;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 /* --- Wheel Section --- */
@@ -40,8 +40,8 @@
 }
 
 #roulette-wheel {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     transition: transform 4s cubic-bezier(0.1, 0.7, 0.1, 1);
 }
 
@@ -76,16 +76,35 @@
     cursor: pointer;
     z-index: 5;
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.2);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
 }
 
-.spin-btn:hover {
+.spin-btn:hover:not(:disabled) {
     transform: translate(-50%, -50%) scale(1.1);
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5), 0 0 50px rgba(255, 255, 255, 0.4);
 }
 
-.spin-btn:active {
+.spin-btn:active:not(:disabled) {
     transform: translate(-50%, -50%) scale(0.95);
+}
+
+.spin-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.spin-btn.spinning {
+    animation: pulse 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
 }
 
 /* --- Controls Section --- */
@@ -112,6 +131,7 @@
 .tabs-list {
     display: flex;
     gap: 0.5rem;
+    flex: 1;
 }
 
 .tab-btn {
@@ -150,11 +170,13 @@
     justify-content: center;
     font-size: 1.2rem;
     flex-shrink: 0;
+    transition: all 0.2s;
 }
 
 .add-tab-btn:hover {
     border-color: var(--color-accent);
     color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* Input */
@@ -172,6 +194,7 @@
     border-radius: 8px;
     color: var(--color-text-primary);
     font-family: var(--font-primary);
+    transition: border-color 0.2s;
 }
 
 #option-input:focus {
@@ -199,12 +222,21 @@
     flex: 1;
     overflow-y: auto;
     padding-right: 0.5rem;
+    margin-bottom: 1rem;
+    max-height: 300px;
 }
 
 .options-list {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.options-empty {
+    text-align: center;
+    color: var(--color-text-secondary);
+    padding: 2rem;
+    font-style: italic;
 }
 
 .option-item {
@@ -216,6 +248,7 @@
     border-radius: 8px;
     border: 1px solid transparent;
     animation: fadeIn 0.3s ease;
+    transition: all 0.2s;
 }
 
 .option-item:hover {
@@ -225,6 +258,7 @@
 
 .option-text {
     font-size: 0.95rem;
+    flex: 1;
 }
 
 .delete-option-btn {
@@ -235,7 +269,7 @@
     font-size: 1.2rem;
     padding: 0 0.5rem;
     opacity: 0.5;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s, color 0.2s;
 }
 
 .delete-option-btn:hover {
@@ -245,13 +279,102 @@
 
 /* Result Display */
 .result-display {
-    margin-top: 1rem;
+    margin-bottom: 1rem;
     text-align: center;
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     min-height: 2rem;
     color: var(--color-accent);
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* History Panel */
+.history-panel {
+    border-top: 1px solid var(--color-border);
+    padding-top: 1rem;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.history-header h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.clear-history-btn {
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clear-history-btn:hover {
+    border-color: #ff4444;
+    color: #ff4444;
+    background: rgba(255, 68, 68, 0.1);
+}
+
+.history-list {
+    max-height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.history-empty {
+    text-align: center;
+    color: var(--color-text-secondary);
+    padding: 1rem;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.8rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    animation: slideIn 0.3s ease;
+}
+
+.history-winner {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    flex: 1;
+}
+
+.history-meta {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
+
+.history-tab {
+    opacity: 0.7;
+}
+
+.history-time {
+    opacity: 0.5;
 }
 
 /* Context Menu */
@@ -264,6 +387,7 @@
     display: none;
     z-index: 1000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    min-width: 120px;
 }
 
 .context-menu.active {
@@ -275,6 +399,7 @@
     cursor: pointer;
     font-size: 0.9rem;
     color: var(--color-text-primary);
+    transition: background 0.2s;
 }
 
 .context-menu-item:hover {
@@ -284,90 +409,6 @@
 .context-menu-item.delete:hover {
     background: rgba(255, 68, 68, 0.2);
     color: #ff4444;
-}
-
-/* --- Responsive --- */
-@media (max-width: 1024px) {
-    .roulette-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        height: auto;
-        padding-bottom: 3rem;
-        gap: 2rem;
-    }
-
-    .controls-section {
-        order: 1;
-        /* Controls on top */
-        max-height: none;
-        /* Allow full height */
-    }
-
-    .wheel-section {
-        order: 2;
-        /* Wheel below */
-        height: auto;
-        padding: 2rem 0;
-        background: transparent;
-        border: none;
-    }
-
-    .wheel-wrapper {
-        width: 450px;
-        height: 450px;
-    }
-}
-
-@media (max-width: 768px) {
-    .roulette-main {
-        padding-top: 80px;
-        align-items: flex-start;
-        /* Start from top */
-    }
-
-    .wheel-wrapper {
-        width: 320px;
-        height: 320px;
-    }
-
-    .spin-btn {
-        width: 60px;
-        height: 60px;
-        font-size: 1rem;
-    }
-
-    .controls-section {
-        padding: 1rem;
-    }
-
-    .tabs-container {
-        margin-bottom: 1rem;
-    }
-
-    .input-area {
-        flex-direction: column;
-    }
-
-    .add-option-btn {
-        width: 100%;
-        padding: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .wheel-wrapper {
-        width: 280px;
-        height: 280px;
-    }
-
-    .modal-content {
-        width: 95%;
-        padding: 1.5rem;
-    }
-
-    .winner-result {
-        font-size: 2rem;
-    }
 }
 
 /* --- Winner Modal --- */
@@ -405,6 +446,7 @@
     transform: scale(0.8);
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    z-index: 2001;
 }
 
 .modal.active .modal-content {
@@ -420,13 +462,15 @@
     color: var(--color-text-secondary);
     font-size: 1.5rem;
     cursor: pointer;
+    transition: color 0.2s;
 }
 
 .close-modal-btn:hover {
     color: var(--color-text-primary);
 }
 
-.modal-content h2 {
+.modal-content h2,
+.modal-content h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     color: var(--color-text-primary);
@@ -439,6 +483,7 @@
     margin-bottom: 2rem;
     font-family: var(--font-display);
     word-wrap: break-word;
+    animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .claim-btn {
@@ -455,4 +500,240 @@
 
 .claim-btn:hover {
     transform: scale(1.05);
+}
+
+/* Confetti Canvas */
+.confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2000;
+}
+
+/* Custom Modals */
+.custom-modal .modal-content {
+    border-color: var(--color-border);
+}
+
+.custom-modal p {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-secondary);
+}
+
+.prompt-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text-primary);
+    font-family: var(--font-primary);
+    margin-bottom: 1.5rem;
+    transition: border-color 0.2s;
+}
+
+.prompt-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.modal-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.modal-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.modal-btn.primary {
+    background: var(--color-accent);
+    color: var(--color-bg-primary);
+}
+
+.modal-btn.primary:hover {
+    transform: scale(1.05);
+}
+
+.modal-btn.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+}
+
+.modal-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .roulette-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        min-height: auto;
+        padding-bottom: 3rem;
+        gap: 2rem;
+    }
+
+    .controls-section {
+        order: 1;
+        max-height: none;
+    }
+
+    .wheel-section {
+        order: 2;
+        height: auto;
+        padding: 2rem 0;
+        background: transparent;
+        border: none;
+    }
+
+    .wheel-wrapper {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .roulette-main {
+        padding-top: 80px;
+        align-items: flex-start;
+    }
+
+    .wheel-wrapper {
+        width: 320px;
+        height: 320px;
+    }
+
+    .spin-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    .controls-section {
+        padding: 1rem;
+    }
+
+    .tabs-container {
+        margin-bottom: 1rem;
+    }
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    .add-option-btn {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    .winner-result {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wheel-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .winner-result {
+        font-size: 1.5rem;
+    }
+}
+
+/* Scrollbar Styling */
+.options-list-container::-webkit-scrollbar,
+.history-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.options-list-container::-webkit-scrollbar-track,
+.history-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.options-list-container::-webkit-scrollbar-thumb,
+.history-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.options-list-container::-webkit-scrollbar-thumb:hover,
+.history-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Focus Indicators for Accessibility */
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

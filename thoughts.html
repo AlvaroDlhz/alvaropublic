@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts - Alvaro De la Hoz</title>
+
+    <!-- SEO & Caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="description"
+        content="Personal blog of Alvaro De la Hoz - Thoughts on creativity, technology, and life.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/thoughts.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/suminagashi.jpg" alt="AD" class="logo-img">
+                <span class="logo-text">Hi there</span>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search thoughts...">
+                    <button class="search-clear" id="searchClear" aria-label="Clear search">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4L4 12M4 4l8 8" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-suggestions" id="searchSuggestions"></div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html#person" class="nav-link">Person</a></li>
+                <li><a href="index.html#artist" class="nav-link">Artist</a></li>
+                <li><a href="index.html#developer" class="nav-link">Developer</a></li>
+                <li><a href="index.html#contact" class="nav-link contact-btn">Get in Touch</a></li>
+                <li><a href="thoughts.html" class="nav-link active">Thoughts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#person" class="mobile-nav-link">Person</a></li>
+            <li><a href="index.html#artist" class="mobile-nav-link">Artist</a></li>
+            <li><a href="index.html#developer" class="mobile-nav-link">Developer</a></li>
+            <li><a href="thoughts.html" class="mobile-nav-link">Thoughts</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="thoughts-hero">
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <span class="section-label">Blog</span>
+                    <h1 class="hero-title">Thoughts</h1>
+                    <p class="hero-subtitle">A space for my ideas, reflections, and creative explorations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Section -->
+        <section class="blog-section">
+            <div class="container">
+                <div id="postsContainer" class="posts-grid">
+                    <!-- Posts will be dynamically loaded here -->
+                </div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <p>No posts found matching your search.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Alvaro De la Hoz. All rights reserved.</p>
+            <p class="footer-note">👻</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/visuals.js"></script>
+    <script src="js/thoughts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+[
+    {
+        "id": 1,
+        "title": "Welcome to My Thoughts",
+        "date": "2025-11-26",
+        "excerpt": "This is the beginning of my personal blog where I'll share my thoughts on creativity, technology, and everything in between.",
+        "content": "Welcome to my Thoughts section! This is a space where I can share my ideas, experiences, and reflections without the constraints of social media algorithms. Here, I'll write about art, development, life, and whatever else comes to mind. I'm excited to have this platform to express myself freely and connect with you on a deeper level.",
+        "tags": [
+            "welcome",
+            "personal",
+            "introduction"
+        ],
+        "author": "Alvaro De la Hoz"
+    },
+    {
+        "id": 2,
+        "title": "The Intersection of Art and Code",
+        "date": "2025-11-25",
+        "excerpt": "Exploring how creativity manifests in both painting and programming, and why they're more similar than you might think.",
+        "content": "As someone who spends time both painting and coding, I've noticed fascinating parallels between these two seemingly different disciplines. Both require creativity, problem-solving, and a willingness to iterate. When I'm debugging code, I'm essentially refining a composition. When I'm mixing colors on a canvas, I'm solving visual problems just like I solve logical ones in JavaScript. The creative process is universal—it's just the medium that changes.",
+        "tags": [
+            "art",
+            "coding",
+            "creativity",
+            "philosophy"
+        ],
+        "author": "Alvaro De la Hoz"
+    },
+    {
+        "id": 3,
+        "title": "Why I Built This Website",
+        "date": "2025-11-20",
+        "excerpt": "Moving away from algorithm-driven platforms to create my own space on the internet.",
+        "content": "I decided to build this website as a response to the current state of social media. I wanted a place that's truly mine—where I control the content, the design, and the experience. No algorithms deciding what you see, no character limits constraining my thoughts, and no ads interrupting the flow. This is my digital home, and I'm glad you're here visiting.",
+        "tags": [
+            "web development",
+            "personal",
+            "social media",
+            "independence"
+        ],
+        "author": "Alvaro De la Hoz"
+    },
+    {
+        "id": 4,
+        "title": "Minimalism in Design",
+        "date": "2025-11-15",
+        "excerpt": "Less is more: why I embrace minimalist aesthetics in both my art and my code.",
+        "content": "Minimalism isn't about having less—it's about making room for more of what matters. In design, this means removing unnecessary elements so the essential ones can shine. In code, it means writing clean, purposeful functions instead of bloated solutions. In life, it means focusing on what truly brings value. This philosophy guides everything I create.",
+        "tags": [
+            "design",
+            "minimalism",
+            "philosophy",
+            "aesthetics"
+        ],
+        "author": "Alvaro De la Hoz"
+    },
+    {
+        "id": 5,
+        "title": "Learning in Public",
+        "date": "2025-11-10",
+        "excerpt": "Embracing the vulnerability of sharing my learning journey and why it's worth it.",
+        "content": "There's something powerful about learning in public. It's vulnerable—you're showing people your mistakes, your confusion, your growth. But that vulnerability is also what makes it valuable. When I share what I'm learning, I'm not just documenting my journey; I'm creating resources for others who might be on the same path. Plus, teaching is one of the best ways to solidify your own understanding.",
+        "tags": [
+            "learning",
+            "growth",
+            "community",
+            "education"
+        ],
+        "author": "Alvaro De la Hoz"
+    }
+]
