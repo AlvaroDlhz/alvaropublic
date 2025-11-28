@@ -226,11 +226,10 @@ class AuthModal {
             // Show success
             this.showSuccess(user);
 
-            // Close modal and reload current page after a short delay
-            // This keeps the user on thoughts.html if they registered from there
+            // Close modal and redirect to thoughts.html after a short delay
             setTimeout(() => {
                 this.close();
-                window.location.reload();
+                window.location.href = 'thoughts.html';
             }, 1500);
 
         } catch (error) {
