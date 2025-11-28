@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker - Build Better Habits</title>
+
+    <!-- SEO & Caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="description"
+        content="Track your daily habits and build better routines with visual insights and streak tracking.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/habit-tracker.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/suminagashi.jpg" alt="AD" class="logo-img">
+                <span class="logo-text">Alvaro De la Hoz</span>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html#person" class="nav-link">Person</a></li>
+                <li><a href="index.html#artist" class="nav-link">Artist</a></li>
+                <li><a href="index.html#developer" class="nav-link">Developer</a></li>
+                <li><a href="index.html#contact" class="nav-link contact-btn">Get in Touch</a></li>
+                <li><a href="thoughts.html" class="nav-link premium-btn">VIP</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#person" class="mobile-nav-link">Person</a></li>
+            <li><a href="index.html#artist" class="mobile-nav-link">Artist</a></li>
+            <li><a href="index.html#developer" class="mobile-nav-link">Developer</a></li>
+            <li><a href="thoughts.html" class="mobile-nav-link">VIP</a></li>
+            <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- View Tabs -->
+        <div class="view-tabs">
+            <button class="tab-btn active" data-view="habits">
+                <span class="tab-icon">✓</span>
+                <span>Habits</span>
+            </button>
+            <button class="tab-btn" data-view="calendar">
+                <span class="tab-icon">📅</span>
+                <span>Calendar</span>
+            </button>
+            <button class="tab-btn" data-view="stats">
+                <span class="tab-icon">📊</span>
+                <span>Statistics</span>
+            </button>
+        </div>
+
+        <!-- Habits View -->
+        <section class="view-section active" id="habitsView">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Today's Habits</h2>
+                    <p class="today-date" id="todayDate"></p>
+                </div>
+
+                <!-- Habits List -->
+                <div class="habits-list" id="habitsList">
+                    <!-- Habits will be dynamically inserted here -->
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-icon">🎯</div>
+                    <h3>No Habits Yet</h3>
+                    <p>Start building better habits by adding your first one!</p>
+                    <button class="btn btn-primary" id="addFirstHabitBtn">Add Your First Habit</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar View -->
+        <section class="view-section" id="calendarView">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Calendar</h2>
+                    <div class="calendar-controls">
+                        <button class="icon-btn" id="prevMonthBtn">←</button>
+                        <span class="current-month" id="currentMonth"></span>
+                        <button class="icon-btn" id="nextMonthBtn">→</button>
+                    </div>
+                </div>
+
+                <!-- Habit Selector -->
+                <div class="habit-selector">
+                    <label for="calendarHabitSelect">Select Habit:</label>
+                    <select id="calendarHabitSelect" class="habit-select">
+                        <option value="all">All Habits</option>
+                    </select>
+                </div>
+
+                <!-- Calendar Grid -->
+                <div class="calendar-grid" id="calendarGrid">
+                    <!-- Calendar will be dynamically generated -->
+                </div>
+
+                <!-- Legend -->
+                <div class="calendar-legend">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: var(--color-bg-secondary);"></span>
+                        <span>No data</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: var(--color-success-light);"></span>
+                        <span>Completed</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: var(--color-danger-light);"></span>
+                        <span>Missed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics View -->
+        <section class="view-section" id="statsView">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Statistics</h2>
+                </div>
+
+                <!-- Overall Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">🔥</div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="totalStreakStat">0</h3>
+                            <p class="stat-label">Total Active Streaks</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✓</div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="completionRateStat">0%</h3>
+                            <p class="stat-label">Completion Rate</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="totalHabitsStat">0</h3>
+                            <p class="stat-label">Total Habits</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-content">
+                            <h3 class="stat-value" id="bestStreakStat">0</h3>
+                            <p class="stat-label">Best Streak</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Individual Habit Stats -->
+                <div class="habit-stats-section">
+                    <h3>Habit Details</h3>
+                    <div class="habit-stats-list" id="habitStatsList">
+                        <!-- Individual habit stats will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Action Button -->
+    <button class="fab" id="addHabitFab" title="Add Habit">
+        <span class="fab-icon">+</span>
+    </button>
+
+    <!-- Add/Edit Habit Modal -->
+    <div class="modal" id="habitModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add New Habit</h2>
+                <button class="modal-close" id="closeModalBtn">&times;</button>
+            </div>
+            <form class="modal-body" id="habitForm">
+                <div class="form-group">
+                    <label for="habitName">Habit Name *</label>
+                    <input type="text" id="habitName" placeholder="e.g., Morning Exercise" required maxlength="50">
+                </div>
+
+                <div class="form-group">
+                    <label for="habitDescription">Description</label>
+                    <textarea id="habitDescription" placeholder="What does this habit involve?" rows="3"
+                        maxlength="200"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="habitCategory">Category</label>
+                        <select id="habitCategory">
+                            <option value="Health">Health</option>
+                            <option value="Productivity">Productivity</option>
+                            <option value="Learning">Learning</option>
+                            <option value="Social">Social</option>
+                            <option value="Mindfulness">Mindfulness</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="habitColor">Color</label>
+                        <div class="color-picker">
+                            <input type="color" id="habitColor" value="#6366f1">
+                            <div class="color-preview" id="colorPreview"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="habitFrequency">Frequency</label>
+                    <select id="habitFrequency">
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="custom">Custom Days</option>
+                    </select>
+                </div>
+
+                <div class="form-group hidden" id="customDaysGroup">
+                    <label>Select Days</label>
+                    <div class="days-selector">
+                        <button type="button" class="day-btn" data-day="0">Sun</button>
+                        <button type="button" class="day-btn" data-day="1">Mon</button>
+                        <button type="button" class="day-btn" data-day="2">Tue</button>
+                        <button type="button" class="day-btn" data-day="3">Wed</button>
+                        <button type="button" class="day-btn" data-day="4">Thu</button>
+                        <button type="button" class="day-btn" data-day="5">Fri</button>
+                        <button type="button" class="day-btn" data-day="6">Sat</button>
+                    </div>
+                </div>
+
+                <input type="hidden" id="habitId">
+                <input type="hidden" id="customDays" value="[]">
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="saveHabitBtn">Save Habit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal" id="settingsModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button class="modal-close" id="closeSettingsBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-section">
+                    <h3>Data Management</h3>
+                    <div class="settings-actions">
+                        <button class="btn btn-secondary" id="exportDataBtn">
+                            <span>📥</span> Export All Data
+                        </button>
+                        <button class="btn btn-secondary" id="importDataBtn">
+                            <span>📤</span> Import Data
+                        </button>
+                        <input type="file" id="importFileInput" accept=".json" style="display: none;">
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Danger Zone</h3>
+                    <button class="btn btn-danger" id="clearAllDataBtn">
+                        <span>🗑️</span> Clear All Data
+                    </button>
+                    <p class="warning-text">⚠️ This action cannot be undone!</p>
+                </div>
+
+                <div class="settings-section">
+                    <h3>About</h3>
+                    <p class="about-text">Habit Tracker v1.0</p>
+                    <p class="about-text">Built with ❤️ by Alvaro De la Hoz</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div class="modal" id="confirmModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h2 id="confirmTitle">Confirm Action</h2>
+            </div>
+            <div class="modal-body">
+                <p id="confirmMessage"></p>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" id="confirmCancelBtn">Cancel</button>
+                    <button class="btn btn-danger" id="confirmActionBtn">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-message" id="toastMessage"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/visuals.js"></script>
+    <script src="js/habit-tracker.js"></script>
+</body>
+
+</html>
