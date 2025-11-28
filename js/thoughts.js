@@ -7,8 +7,21 @@ let allPosts = [];
 let filteredPosts = [];
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Check authentication before loading posts
+    if (!authManager.isAuthenticated()) {
+        // Show auth modal if not authenticated, redirect to index if closed
+        setTimeout(() => {
+            authModal.open({
+                redirectOnClose: 'index.html'
+            });
+        }, 500);
+        return;
+    }
+
+    // User is authenticated, load posts
     loadBlogPosts();
     initSearch();
+    showUserProfile();
 });
 
 /**
@@ -275,3 +288,27 @@ function showError() {
         `;
     }
 }
+
+/**
+ * Show user profile in navbar
+ */
+function showUserProfile() {
+    const user = authManager.getCurrentUser();
+    if (!user) return;
+
+    const navLinks = document.querySelector('.nav-links');
+    if (!navLinks) return;
+
+    // Create user profile element
+    const userProfile = document.createElement('li');
+    userProfile.innerHTML = `
+        <div class="user-profile">
+            <div class="user-avatar">${user.name.charAt(0).toUpperCase()}</div>
+            <span class="user-name">${user.name.split(' ')[0]}</span>
+            <button class="logout-btn" onclick="authManager.logout()">Logout</button>
+        </div>
+    `;
+
+    navLinks.appendChild(userProfile);
+}
+

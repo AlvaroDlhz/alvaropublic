@@ -231,6 +231,126 @@ h6 {
     border-color: var(--color-text-primary);
 }
 
+.premium-btn {
+    padding: 0.65rem 1.8rem;
+    border: 1.5px solid;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    background-color: transparent;
+    position: relative;
+    overflow: visible;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background-image: linear-gradient(#0a0a0a, #0a0a0a);
+    background-clip: padding-box;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+}
+
+.premium-btn::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(135deg, 
+        rgba(255, 0, 110, 0.4) 0%,
+        rgba(0, 217, 255, 0.3) 25%,
+        rgba(0, 255, 136, 0.2) 50%,
+        rgba(0, 217, 255, 0.3) 75%,
+        rgba(255, 0, 110, 0.4) 100%);
+    border-radius: 50px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+    filter: blur(8px);
+    animation: none;
+}
+
+.premium-btn::after {
+    content: '';
+    position: absolute;
+    top: 1.5px;
+    left: 1.5px;
+    right: 1.5px;
+    bottom: 1.5px;
+    background-color: #0a0a0a;
+    border-radius: 48px;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+.premium-btn:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px) translateZ(8px) scale(1.02);
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 0, 110, 0.05) 0%,
+        rgba(0, 217, 255, 0.03) 100%
+    ), linear-gradient(#0a0a0a, #0a0a0a);
+    background-clip: padding-box;
+    box-shadow: 
+        /* Sombra profunda suave */
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        /* Aura de luz difusa */
+        0 0 30px rgba(0, 217, 255, 0.25),
+        0 0 60px rgba(255, 0, 110, 0.15),
+        /* Iluminación interior sutil */
+        inset 0 1px 2px rgba(255, 255, 255, 0.08),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.4);
+    animation: premiumPulse 2s ease-in-out infinite;
+}
+
+.premium-btn:hover::before {
+    opacity: 0.8;
+    filter: blur(12px);
+}
+
+.premium-btn:hover::after {
+    background-color: rgba(10, 10, 10, 0.8);
+}
+
+.premium-btn:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(0, 217, 255, 0.15),
+        inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.premium-btn:focus {
+    outline: none;
+}
+
+.premium-btn:focus-visible {
+    outline: 2px solid rgba(0, 217, 255, 0.3);
+    outline-offset: 2px;
+}
+
+@keyframes premiumPulse {
+    0%, 100% {
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow: 
+            0 20px 50px rgba(0, 0, 0, 0.5),
+            0 0 30px rgba(0, 217, 255, 0.25),
+            0 0 60px rgba(255, 0, 110, 0.15),
+            inset 0 1px 2px rgba(255, 255, 255, 0.08),
+            inset 0 -1px 2px rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        border-color: rgba(0, 217, 255, 0.5);
+        box-shadow: 
+            0 20px 50px rgba(0, 0, 0, 0.5),
+            0 0 40px rgba(0, 217, 255, 0.35),
+            0 0 70px rgba(255, 0, 110, 0.2),
+            inset 0 1px 2px rgba(255, 255, 255, 0.1),
+            inset 0 -1px 2px rgba(0, 0, 0, 0.4);
+    }
+}
+
 .mobile-menu-btn {
     display: none;
     background: none;
