@@ -1,9 +1,9 @@
 /* =========================================
-   THOUGHTS BLOG - SPECIFIC STYLES
+   THOUGHTS BLOG - PREMIUM STYLES
    ========================================= */
 
 /* =========================================
-   1. SEARCH BAR STYLES
+   1. SEARCH BAR STYLES - PREMIUM
    ========================================= */
 .search-container {
     position: relative;
@@ -24,7 +24,6 @@
 }
 
 .search-wrapper:focus-within {
-    background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -70,23 +69,26 @@
     display: flex;
 }
 
-/* Search Suggestions Dropdown */
+/* Search Suggestions Dropdown - Premium */
 .search-suggestions {
     position: absolute;
     top: calc(100% + 0.5rem);
     left: 0;
     right: 0;
-    background: var(--color-bg-secondary);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
+    background: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
     max-height: 400px;
     overflow-y: auto;
     z-index: 1001;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: var(--transition-fast);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 1px rgba(147, 51, 234, 0.3);
 }
 
 .search-suggestions.visible {
@@ -97,9 +99,29 @@
 
 .suggestion-item {
     padding: 1rem;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     cursor: pointer;
-    transition: var(--transition-fast);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.suggestion-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(147, 51, 234, 0.1),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.suggestion-item:hover::before {
+    left: 100%;
 }
 
 .suggestion-item:last-child {
@@ -108,15 +130,16 @@
 
 .suggestion-item:hover,
 .suggestion-item.active {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(147, 51, 234, 0.08);
 }
 
 .suggestion-title {
     font-weight: 500;
     color: var(--color-text-primary);
     margin-bottom: 0.25rem;
-    font-size: 0.95rem;
+    font-size: 0.80rem;
 }
+
 
 .suggestion-excerpt {
     font-size: 0.85rem;
@@ -145,7 +168,7 @@
 }
 
 /* =========================================
-   2. THOUGHTS HERO SECTION
+   2. THOUGHTS HERO SECTION - PREMIUM
    ========================================= */
 .thoughts-hero {
     padding-top: calc(80px + var(--spacing-xl));
@@ -153,13 +176,33 @@
     text-align: center;
 }
 
+
 .thoughts-hero .hero-title {
     font-size: clamp(3rem, 8vw, 5rem);
     margin-bottom: var(--spacing-md);
-    background: linear-gradient(to right, #fff, #888);
+    background: linear-gradient(135deg,
+            #fff 0%,
+            rgba(147, 51, 234, 0.9) 30%,
+            rgba(59, 130, 246, 0.9) 60%,
+            rgba(236, 72, 153, 0.9) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: relative;
+    animation: shimmer 3s ease-in-out infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .thoughts-hero .hero-subtitle {
@@ -167,13 +210,16 @@
     color: var(--color-text-secondary);
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 /* =========================================
-   3. BLOG POSTS GRID
+   3. BLOG POSTS GRID - PREMIUM
    ========================================= */
 .blog-section {
     padding: var(--spacing-lg) 0 var(--spacing-xl);
+    position: relative;
 }
 
 .posts-grid {
@@ -182,23 +228,46 @@
     gap: var(--spacing-md);
 }
 
-/* Blog Post Card */
+/* Blog Post Card - Premium with Glassmorphism */
 .post-card {
-    background: var(--color-bg-secondary);
-    border: 1px solid var(--color-border);
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid transparent;
+    border-radius: 24px;
     padding: var(--spacing-lg);
-    transition: var(--transition-normal);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
 }
 
-.post-card:hover {
-    border-color: rgba(255, 255, 255, 0.3);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+/* Gradient glow on hover */
+.post-card::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 24px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease;
+    filter: blur(20px);
+    background-image: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)),
+        linear-gradient(135deg,
+            rgba(147, 51, 234, 0.2) 0%,
+            rgba(59, 130, 246, 0.2) 50%,
+            rgba(236, 72, 153, 0.2) 100%);
+}
+
+.post-card:hover::after {
+    opacity: 1;
 }
 
 .post-date {
@@ -215,6 +284,19 @@
     margin-bottom: var(--spacing-sm);
     color: var(--color-text-primary);
     line-height: 1.2;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.post-card:hover .post-title {
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(233, 188, 253, 0.9) 50%,
+            rgba(255, 255, 255, 0.9) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .post-excerpt {
@@ -222,6 +304,8 @@
     line-height: 1.6;
     margin-bottom: var(--spacing-md);
     flex-grow: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .post-tags {
@@ -229,6 +313,8 @@
     gap: 0.5rem;
     flex-wrap: wrap;
     margin-top: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .post-tag {
@@ -293,6 +379,11 @@
     .thoughts-hero {
         padding-top: calc(80px + var(--spacing-lg));
     }
+
+    /* Reduce animation intensity on mobile */
+    .post-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
 }
 
 @media (max-width: 480px) {
@@ -306,22 +397,23 @@
 }
 
 /* =========================================
-   5. ANIMATIONS
+   5. PREMIUM ANIMATIONS
    ========================================= */
 @keyframes fadeInCard {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px) scale(0.95);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
 .post-card {
-    animation: fadeInCard 0.5s ease forwards;
+    animation: fadeInCard 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
 }
 
 .post-card:nth-child(1) {
@@ -329,28 +421,40 @@
 }
 
 .post-card:nth-child(2) {
-    animation-delay: 0.2s;
+    animation-delay: 0.15s;
 }
 
 .post-card:nth-child(3) {
-    animation-delay: 0.3s;
+    animation-delay: 0.2s;
 }
 
 .post-card:nth-child(4) {
-    animation-delay: 0.4s;
+    animation-delay: 0.25s;
 }
 
 .post-card:nth-child(5) {
-    animation-delay: 0.5s;
+    animation-delay: 0.3s;
 }
 
 .post-card:nth-child(6) {
-    animation-delay: 0.6s;
+    animation-delay: 0.35s;
 }
 
-/* Smooth scrollbar for suggestions */
+.post-card:nth-child(7) {
+    animation-delay: 0.4s;
+}
+
+.post-card:nth-child(8) {
+    animation-delay: 0.45s;
+}
+
+.post-card:nth-child(9) {
+    animation-delay: 0.5s;
+}
+
+/* Smooth scrollbar for suggestions - Premium */
 .search-suggestions::-webkit-scrollbar {
-    width: 8px;
+    width: 0px;
 }
 
 .search-suggestions::-webkit-scrollbar-track {
@@ -358,10 +462,17 @@
 }
 
 .search-suggestions::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.4),
+            rgba(59, 131, 246, 0));
     border-radius: 4px;
 }
 
 .search-suggestions::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(180deg,
+            rgba(147, 51, 234, 0.6),
+            rgba(59, 130, 246, 0.6));
 }
+
+/* Floating animation for hero section */
