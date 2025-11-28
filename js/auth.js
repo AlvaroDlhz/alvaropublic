@@ -120,8 +120,8 @@ class AuthModal {
                     <button class="auth-modal-close" aria-label="Close">&times;</button>
                     
                     <div class="auth-modal-header">
-                        <h2 class="auth-modal-title">Join Thoughts</h2>
-                        <p class="auth-modal-subtitle">Exclusive access to my personal blog and insights</p>
+                        <h2 class="auth-modal-title">Thoughts</h2>
+                        <p class="auth-modal-subtitle">VIP access.</p>
                     </div>
 
                     <form id="authForm" class="auth-form">
@@ -150,11 +150,11 @@ class AuthModal {
                         </div>
 
                         <div class="auth-form-notice">
-                            <p>🔒.</p>
+                            <p>🔒 Awesome things are coming, join the waitlist.</p>
                         </div>
 
                         <button type="submit" class="auth-submit-btn">
-                            <span class="btn-text">Get Access</span>
+                            <span class="btn-text">Be the first</span>
                             <span class="btn-icon">→</span>
                         </button>
                     </form>
@@ -169,8 +169,12 @@ class AuthModal {
                             <span class="feature-text">Creative insights</span>
                         </div>
                         <div class="auth-feature">
-                            <span class="feature-icon">💡</span>
-                            <span class="feature-text">Tech thoughts</span>
+                            <span class="feature-icon">👥</span>
+                            <span class="feature-text">Premium community</span>
+                        </div>
+                        <div class="auth-feature">
+                            <span class="feature-icon">🔴</span>
+                            <span class="feature-text">Private live streams</span>
                         </div>
                     </div>
                 </div>
