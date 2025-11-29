@@ -1,0 +1,260 @@
+/* Signup Popup Styles */
+.signup-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.signup-popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.signup-popup {
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.95), rgba(30, 30, 30, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.signup-popup-overlay.active .signup-popup {
+    transform: scale(1) translateY(0);
+}
+
+.signup-popup-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.signup-popup-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 1);
+    transform: rotate(90deg);
+}
+
+.signup-popup-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(102, 126, 234, 0);
+    }
+}
+
+.signup-popup h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.signup-popup p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.signup-popup-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.signup-popup-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+/* Primary Button - Same as VIP Button */
+.signup-popup-btn.primary {
+    padding: 0.65rem 1.8rem;
+    border: 1.5px solid;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    background-color: transparent;
+    position: relative;
+    overflow: visible;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background-image: linear-gradient(#0a0a0a, #0a0a0a);
+    background-clip: padding-box;
+    color: #fff;
+}
+
+.signup-popup-btn.primary::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: linear-gradient(135deg,
+            rgba(255, 0, 110, 0.4) 0%,
+            rgba(0, 217, 255, 0.3) 25%,
+            rgba(0, 255, 136, 0.2) 50%,
+            rgba(0, 217, 255, 0.3) 75%,
+            rgba(255, 0, 110, 0.4) 100%);
+    border-radius: 50px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+    filter: blur(8px);
+    animation: none;
+}
+
+.signup-popup-btn.primary::after {
+    content: '';
+    position: absolute;
+    top: 1.5px;
+    left: 1.5px;
+    right: 1.5px;
+    bottom: 1.5px;
+    background-color: #0a0a0a;
+    border-radius: 48px;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+.signup-popup-btn.primary:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px) translateZ(8px) scale(1.02);
+    background-image: linear-gradient(180deg,
+            rgba(255, 0, 110, 0.05) 0%,
+            rgba(0, 217, 255, 0.03) 100%), linear-gradient(#0a0a0a, #0a0a0a);
+    background-clip: padding-box;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(0, 217, 255, 0.25),
+        0 0 60px rgba(255, 0, 110, 0.15),
+        inset 0 1px 2px rgba(255, 255, 255, 0.08),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.4);
+    animation: premiumPulse 2s ease-in-out infinite;
+}
+
+.signup-popup-btn.primary:hover::before {
+    opacity: 0.8;
+    filter: blur(12px);
+}
+
+.signup-popup-btn.primary:hover::after {
+    background-color: rgba(10, 10, 10, 0.8);
+}
+
+.signup-popup-btn.primary:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(0, 217, 255, 0.15),
+        inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes premiumPulse {
+
+    0%,
+    100% {
+        border-color: rgba(255, 255, 255, 0.4);
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.5),
+            0 0 30px rgba(0, 217, 255, 0.25),
+            0 0 60px rgba(255, 0, 110, 0.15),
+            inset 0 1px 2px rgba(255, 255, 255, 0.08),
+            inset 0 -1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    50% {
+        border-color: rgba(0, 217, 255, 0.5);
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.5),
+            0 0 40px rgba(0, 217, 255, 0.35),
+            0 0 70px rgba(255, 0, 110, 0.2),
+            inset 0 1px 2px rgba(255, 255, 255, 0.1),
+            inset 0 -1px 2px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Secondary Button */
+.signup-popup-btn.secondary {
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.signup-popup-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .signup-popup {
+        padding: 2rem 1.5rem;
+    }
+
+    .signup-popup h2 {
+        font-size: 1.5rem;
+    }
+
+    .signup-popup p {
+        font-size: 0.9rem;
+    }
+}

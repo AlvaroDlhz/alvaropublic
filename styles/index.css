@@ -256,12 +256,12 @@ h6 {
     left: -1px;
     right: -1px;
     bottom: -1px;
-    background: linear-gradient(135deg, 
-        rgba(255, 0, 110, 0.4) 0%,
-        rgba(0, 217, 255, 0.3) 25%,
-        rgba(0, 255, 136, 0.2) 50%,
-        rgba(0, 217, 255, 0.3) 75%,
-        rgba(255, 0, 110, 0.4) 100%);
+    background: linear-gradient(135deg,
+            rgba(255, 0, 110, 0.4) 0%,
+            rgba(0, 217, 255, 0.3) 25%,
+            rgba(0, 255, 136, 0.2) 50%,
+            rgba(0, 217, 255, 0.3) 75%,
+            rgba(255, 0, 110, 0.4) 100%);
     border-radius: 50px;
     z-index: -1;
     opacity: 0;
@@ -286,13 +286,11 @@ h6 {
 .premium-btn:hover {
     border-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-2px) translateZ(8px) scale(1.02);
-    background-image: linear-gradient(
-        180deg,
-        rgba(255, 0, 110, 0.05) 0%,
-        rgba(0, 217, 255, 0.03) 100%
-    ), linear-gradient(#0a0a0a, #0a0a0a);
+    background-image: linear-gradient(180deg,
+            rgba(255, 0, 110, 0.05) 0%,
+            rgba(0, 217, 255, 0.03) 100%), linear-gradient(#0a0a0a, #0a0a0a);
     background-clip: padding-box;
-    box-shadow: 
+    box-shadow:
         /* Sombra profunda suave */
         0 20px 50px rgba(0, 0, 0, 0.5),
         /* Aura de luz difusa */
@@ -315,7 +313,7 @@ h6 {
 
 .premium-btn:active {
     transform: translateY(-1px) scale(0.98);
-    box-shadow: 
+    box-shadow:
         0 8px 20px rgba(0, 0, 0, 0.4),
         0 0 20px rgba(0, 217, 255, 0.15),
         inset 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -331,18 +329,21 @@ h6 {
 }
 
 @keyframes premiumPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         border-color: rgba(255, 255, 255, 0.4);
-        box-shadow: 
+        box-shadow:
             0 20px 50px rgba(0, 0, 0, 0.5),
             0 0 30px rgba(0, 217, 255, 0.25),
             0 0 60px rgba(255, 0, 110, 0.15),
             inset 0 1px 2px rgba(255, 255, 255, 0.08),
             inset 0 -1px 2px rgba(0, 0, 0, 0.4);
     }
+
     50% {
         border-color: rgba(0, 217, 255, 0.5);
-        box-shadow: 
+        box-shadow:
             0 20px 50px rgba(0, 0, 0, 0.5),
             0 0 40px rgba(0, 217, 255, 0.35),
             0 0 70px rgba(255, 0, 110, 0.2),

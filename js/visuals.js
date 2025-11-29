@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initScrollProgress();
   initLightbox();
+  initSignupPopup();
 });
 
 /**
@@ -249,4 +250,86 @@ function sendEmail() {
       btn.innerText = originalText;
       btn.disabled = false;
     });
+}
+
+/**
+ * Initialize Signup Popup
+ * Shows a friendly popup when user scrolls between Artist and Developer sections
+ * Only shows once per user (tracked with localStorage)
+ */
+function initSignupPopup() {
+  const STORAGE_KEY = 'signupPopupShown';
+  const popup = document.getElementById('signupPopup');
+  const closeBtn = document.querySelector('.signup-popup-close');
+  const closePopupBtn = document.getElementById('closePopup');
+
+  // Check if popup has already been shown
+  if (localStorage.getItem(STORAGE_KEY) === 'true') {
+    return; // Don't show popup again
+  }
+
+  let popupShown = false;
+
+  // Create an intersection observer for the developer section
+  const developerSection = document.getElementById('developer');
+  const artistSection = document.getElementById('artist');
+
+  if (!developerSection || !artistSection || !popup) return;
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-20% 0px -20% 0px', // Trigger when section is about 20% into viewport
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Show popup when developer section is about to come into view
+      // and user has scrolled past the artist section
+      if (entry.isIntersecting && !popupShown) {
+        const artistRect = artistSection.getBoundingClientRect();
+
+        // Check if we've scrolled past most of the artist section
+        if (artistRect.bottom < window.innerHeight * 0.5) {
+          showPopup();
+          popupShown = true;
+          observer.disconnect(); // Stop observing after showing popup
+        }
+      }
+    });
+  }, observerOptions);
+
+  observer.observe(developerSection);
+
+  // Function to show popup
+  function showPopup() {
+    popup.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  // Function to close popup
+  function closePopup() {
+    popup.classList.remove('active');
+    document.body.style.overflow = '';
+    // Mark popup as shown in localStorage
+    localStorage.setItem(STORAGE_KEY, 'true');
+  }
+
+  // Close button event listeners
+  closeBtn.addEventListener('click', closePopup);
+  closePopupBtn.addEventListener('click', closePopup);
+
+  // Close on overlay click
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) {
+      closePopup();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && popup.classList.contains('active')) {
+      closePopup();
+    }
+  });
 }
