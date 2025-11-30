@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format Converter - Alvaro De la Hoz</title>
+
+    <!-- SEO & Caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="description" content="Convert files between different formats - images, videos, documents, and audio.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="opensource-styles/format-converter.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/suminagashi.jpg" alt="AD" class="logo-img">
+                <span class="logo-text">Alvaro De la Hoz</span>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="../index.html#person" class="nav-link">Person</a></li>
+                <li><a href="../index.html#artist" class="nav-link">Artist</a></li>
+                <li><a href="../index.html#developer" class="nav-link">Developer</a></li>
+                <li><a href="../index.html#contact" class="nav-link contact-btn">Get in Touch</a></li>
+                <li><a href="../thoughts.html" class="nav-link premium-btn">VIP</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <ul class="mobile-nav-links">
+            <li><a href="../index.html#person" class="mobile-nav-link">Person</a></li>
+            <li><a href="../index.html#artist" class="mobile-nav-link">Artist</a></li>
+            <li><a href="../index.html#developer" class="mobile-nav-link">Developer</a></li>
+            <li><a href="../thoughts.html" class="mobile-nav-link">VIP</a></li>
+            <li><a href="../index.html#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="converter-hero">
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Format Converter</span>
+                    </h1>
+                    <p class="hero-subtitle">Convert your files between different formats with ease</p>
+                    <p class="hero-description">Choose a conversion type below to get started</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conversion Cards Section -->
+        <section class="conversions-section">
+            <div class="container">
+                <!-- Image Conversions -->
+                <div class="category-section">
+                    <h2 class="category-title">
+                        <span class="category-icon">🖼️</span>
+                        Image Conversions
+                    </h2>
+                    <div class="cards-grid">
+                        <div class="conversion-card" data-conversion="jpg-png">
+                            <div class="card-icon">📸</div>
+                            <h3 class="card-title">JPG → PNG</h3>
+                            <p class="card-description">Convert JPEG images to PNG format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="png-jpg">
+                            <div class="card-icon">🎨</div>
+                            <h3 class="card-title">PNG → JPG</h3>
+                            <p class="card-description">Convert PNG images to JPEG format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="webp-png">
+                            <div class="card-icon">🌐</div>
+                            <h3 class="card-title">WebP → PNG</h3>
+                            <p class="card-description">Convert WebP images to PNG format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="png-webp">
+                            <div class="card-icon">⚡</div>
+                            <h3 class="card-title">PNG → WebP</h3>
+                            <p class="card-description">Convert PNG to optimized WebP</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="heic-jpg">
+                            <div class="card-icon">📱</div>
+                            <h3 class="card-title">HEIC → JPG</h3>
+                            <p class="card-description">Convert iPhone photos to JPEG</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="svg-png">
+                            <div class="card-icon">🎯</div>
+                            <h3 class="card-title">SVG → PNG</h3>
+                            <p class="card-description">Convert vector graphics to PNG</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Conversions -->
+                <div class="category-section">
+                    <h2 class="category-title">
+                        <span class="category-icon">🎬</span>
+                        Video Conversions
+                    </h2>
+                    <div class="cards-grid">
+                        <div class="conversion-card" data-conversion="mp4-avi">
+                            <div class="card-icon">🎥</div>
+                            <h3 class="card-title">MP4 → AVI</h3>
+                            <p class="card-description">Convert MP4 videos to AVI format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="avi-mp4">
+                            <div class="card-icon">📹</div>
+                            <h3 class="card-title">AVI → MP4</h3>
+                            <p class="card-description">Convert AVI videos to MP4 format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="mov-mp4">
+                            <div class="card-icon">🎞️</div>
+                            <h3 class="card-title">MOV → MP4</h3>
+                            <p class="card-description">Convert QuickTime to MP4</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="webm-mp4">
+                            <div class="card-icon">🌍</div>
+                            <h3 class="card-title">WebM → MP4</h3>
+                            <p class="card-description">Convert WebM videos to MP4</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="mkv-mp4">
+                            <div class="card-icon">📺</div>
+                            <h3 class="card-title">MKV → MP4</h3>
+                            <p class="card-description">Convert MKV videos to MP4</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="mp4-gif">
+                            <div class="card-icon">✨</div>
+                            <h3 class="card-title">MP4 → GIF</h3>
+                            <p class="card-description">Convert videos to animated GIFs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document Conversions -->
+                <div class="category-section">
+                    <h2 class="category-title">
+                        <span class="category-icon">📄</span>
+                        Document Conversions
+                    </h2>
+                    <div class="cards-grid">
+                        <div class="conversion-card" data-conversion="pdf-docx">
+                            <div class="card-icon">📝</div>
+                            <h3 class="card-title">PDF → DOCX</h3>
+                            <p class="card-description">Convert PDF to Word document</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="docx-pdf">
+                            <div class="card-icon">📋</div>
+                            <h3 class="card-title">DOCX → PDF</h3>
+                            <p class="card-description">Convert Word to PDF format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="xlsx-csv">
+                            <div class="card-icon">📊</div>
+                            <h3 class="card-title">XLSX → CSV</h3>
+                            <p class="card-description">Convert Excel to CSV format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="csv-xlsx">
+                            <div class="card-icon">📈</div>
+                            <h3 class="card-title">CSV → XLSX</h3>
+                            <p class="card-description">Convert CSV to Excel format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="txt-pdf">
+                            <div class="card-icon">📃</div>
+                            <h3 class="card-title">TXT → PDF</h3>
+                            <p class="card-description">Convert text files to PDF</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="html-pdf">
+                            <div class="card-icon">🌐</div>
+                            <h3 class="card-title">HTML → PDF</h3>
+                            <p class="card-description">Convert web pages to PDF</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Conversions -->
+                <div class="category-section">
+                    <h2 class="category-title">
+                        <span class="category-icon">🎵</span>
+                        Audio Conversions
+                    </h2>
+                    <div class="cards-grid">
+                        <div class="conversion-card" data-conversion="mp3-wav">
+                            <div class="card-icon">🎧</div>
+                            <h3 class="card-title">MP3 → WAV</h3>
+                            <p class="card-description">Convert MP3 to WAV format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="wav-mp3">
+                            <div class="card-icon">🎼</div>
+                            <h3 class="card-title">WAV → MP3</h3>
+                            <p class="card-description">Convert WAV to MP3 format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="flac-mp3">
+                            <div class="card-icon">🎶</div>
+                            <h3 class="card-title">FLAC → MP3</h3>
+                            <p class="card-description">Convert FLAC to MP3 format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="m4a-mp3">
+                            <div class="card-icon">🎤</div>
+                            <h3 class="card-title">M4A → MP3</h3>
+                            <p class="card-description">Convert M4A to MP3 format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="ogg-mp3">
+                            <div class="card-icon">🔊</div>
+                            <h3 class="card-title">OGG → MP3</h3>
+                            <p class="card-description">Convert OGG to MP3 format</p>
+                        </div>
+                        <div class="conversion-card" data-conversion="aac-mp3">
+                            <div class="card-icon">🎺</div>
+                            <h3 class="card-title">AAC → MP3</h3>
+                            <p class="card-description">Convert AAC to MP3 format</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Alvaro De la Hoz. All rights reserved.</p>
+            <p class="footer-note">👻</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/visuals.js"></script>
+    <script src="opensource-scripts/format-converter.js"></script>
+</body>
+
+</html>
