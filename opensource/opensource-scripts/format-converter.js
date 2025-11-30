@@ -43,20 +43,22 @@ function showNotification(message) {
     notification.className = 'converter-notification';
     notification.textContent = message;
 
-    // Add styles
+    // Add minimalist styles matching index.html
     Object.assign(notification.style, {
         position: 'fixed',
         top: '100px',
         right: '20px',
-        background: 'linear-gradient(135deg, hsl(260, 100%, 65%), hsl(200, 100%, 60%))',
-        color: 'white',
+        background: '#111111',
+        color: '#f5f5f5',
         padding: '1rem 1.5rem',
         borderRadius: '12px',
-        boxShadow: '0 10px 30px rgba(138, 43, 226, 0.4)',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)',
         zIndex: '10000',
-        fontSize: '1rem',
+        fontSize: '0.9rem',
         fontWeight: '500',
-        animation: 'slideInRight 0.4s ease, slideOutRight 0.4s ease 2.6s',
+        fontFamily: "'Inter', sans-serif",
+        animation: 'slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1), slideOutRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) 2.6s',
         maxWidth: '300px',
         backdropFilter: 'blur(10px)'
     });
