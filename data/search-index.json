@@ -1,0 +1,409 @@
+{
+    "pages": [
+        {
+            "id": "home",
+            "title": "Home - Alvaro De la Hoz",
+            "description": "Crafting digital experiences that merge art with technology",
+            "url": "index.html#home",
+            "category": "Pages",
+            "icon": "🏠",
+            "keywords": [
+                "home",
+                "inicio",
+                "portfolio",
+                "alvaro",
+                "developer",
+                "artist"
+            ]
+        },
+        {
+            "id": "person",
+            "title": "The Person",
+            "description": "Who am I? A space where I develop my projects and thoughts without worrying about social media algorithms",
+            "url": "index.html#person",
+            "category": "Pages",
+            "icon": "👤",
+            "keywords": [
+                "person",
+                "about",
+                "quien soy",
+                "bio",
+                "biography"
+            ]
+        },
+        {
+            "id": "artist",
+            "title": "The Artist",
+            "description": "Art gallery showcasing acrylic paintings and creative works",
+            "url": "index.html#artist",
+            "category": "Pages",
+            "icon": "🎨",
+            "keywords": [
+                "artist",
+                "art",
+                "gallery",
+                "painting",
+                "acrylic",
+                "creative"
+            ]
+        },
+        {
+            "id": "developer",
+            "title": "The Developer",
+            "description": "Development projects including Doggo, My Store, Open Source Apps, and Brainpedia",
+            "url": "index.html#developer",
+            "category": "Pages",
+            "icon": "💻",
+            "keywords": [
+                "developer",
+                "projects",
+                "code",
+                "programming",
+                "development"
+            ]
+        },
+        {
+            "id": "contact",
+            "title": "Get in Touch",
+            "description": "Contact form and social media links to connect",
+            "url": "index.html#contact",
+            "category": "Pages",
+            "icon": "📧",
+            "keywords": [
+                "contact",
+                "email",
+                "social",
+                "connect",
+                "contacto"
+            ]
+        },
+        {
+            "id": "gallery",
+            "title": "Full Gallery",
+            "description": "Complete art gallery with all artwork pieces",
+            "url": "gallery.html",
+            "category": "Pages",
+            "icon": "🖼️",
+            "keywords": [
+                "gallery",
+                "art",
+                "full",
+                "complete",
+                "galeria"
+            ]
+        },
+        {
+            "id": "thoughts",
+            "title": "Thoughts VIP",
+            "description": "Exclusive thoughts section with personal reflections and creative insights",
+            "url": "thoughts.html",
+            "category": "Pages",
+            "icon": "✨",
+            "keywords": [
+                "thoughts",
+                "vip",
+                "blog",
+                "reflections",
+                "ideas",
+                "pensamientos"
+            ]
+        },
+        {
+            "id": "apps",
+            "title": "Open Source Apps",
+            "description": "Collection of open source applications and tools",
+            "url": "apps.html",
+            "category": "Pages",
+            "icon": "🚀",
+            "keywords": [
+                "apps",
+                "applications",
+                "open source",
+                "tools"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "id": "doggo",
+            "title": "Doggo",
+            "description": "Revolutionizing the way we use social media, productivity-oriented",
+            "url": "#",
+            "category": "Projects",
+            "icon": "🐕",
+            "tags": [
+                "HTML/CSS",
+                "JavaScript",
+                "React"
+            ],
+            "type": "Free",
+            "keywords": [
+                "doggo",
+                "social media",
+                "productivity",
+                "react"
+            ]
+        },
+        {
+            "id": "mystore",
+            "title": "My Store",
+            "description": "An e-commerce website for selling my art and products",
+            "url": "#",
+            "category": "Projects",
+            "icon": "🛍️",
+            "tags": [
+                "HTML/CSS",
+                "JavaScript",
+                "React"
+            ],
+            "type": "Personal Business",
+            "keywords": [
+                "store",
+                "ecommerce",
+                "shop",
+                "art",
+                "products"
+            ]
+        },
+        {
+            "id": "opensource",
+            "title": "Open Source Apps",
+            "description": "Contributions to the developer community and public tools",
+            "url": "apps.html",
+            "category": "Projects",
+            "icon": "🔓",
+            "tags": [
+                "Git",
+                "Node.js",
+                "Community"
+            ],
+            "type": "Open Source",
+            "keywords": [
+                "open source",
+                "community",
+                "contributions",
+                "tools"
+            ]
+        },
+        {
+            "id": "brainpedia",
+            "title": "Brainpedia",
+            "description": "The place where scientists and researchers can share their findings and knowledge with the world",
+            "url": "#",
+            "category": "Projects",
+            "icon": "🧠",
+            "tags": [
+                "Git",
+                "Node.js",
+                "Community"
+            ],
+            "type": "Open Source",
+            "keywords": [
+                "brainpedia",
+                "science",
+                "research",
+                "knowledge",
+                "sharing"
+            ]
+        },
+        {
+            "id": "habit-tracker",
+            "title": "Habit Tracker",
+            "description": "Track your daily habits and build better routines",
+            "url": "habit-tracker.html",
+            "category": "Projects",
+            "icon": "✅",
+            "tags": [
+                "HTML/CSS",
+                "JavaScript",
+                "LocalStorage"
+            ],
+            "type": "Open Source",
+            "keywords": [
+                "habit",
+                "tracker",
+                "routine",
+                "productivity",
+                "habits"
+            ]
+        },
+        {
+            "id": "roulette",
+            "title": "Roulette App",
+            "description": "Interactive roulette wheel for random selection and decision making",
+            "url": "roulette.html",
+            "category": "Projects",
+            "icon": "🎡",
+            "tags": [
+                "HTML/CSS",
+                "JavaScript",
+                "Canvas"
+            ],
+            "type": "Open Source",
+            "keywords": [
+                "roulette",
+                "random",
+                "wheel",
+                "decision",
+                "picker"
+            ]
+        }
+    ],
+    "artwork": [
+        {
+            "id": "artwork-1",
+            "title": "Number 1",
+            "description": "Acrylic Painting 2025",
+            "url": "index.html#artist",
+            "category": "Artwork",
+            "icon": "🎨",
+            "keywords": [
+                "painting",
+                "acrylic",
+                "art",
+                "2025"
+            ]
+        },
+        {
+            "id": "artwork-2",
+            "title": "Number 2",
+            "description": "Acrylic Painting 2025",
+            "url": "index.html#artist",
+            "category": "Artwork",
+            "icon": "🎨",
+            "keywords": [
+                "painting",
+                "acrylic",
+                "art",
+                "2025"
+            ]
+        },
+        {
+            "id": "artwork-3",
+            "title": "Number 3",
+            "description": "Acrylic Painting 2025",
+            "url": "index.html#artist",
+            "category": "Artwork",
+            "icon": "🎨",
+            "keywords": [
+                "painting",
+                "acrylic",
+                "art",
+                "2025"
+            ]
+        }
+    ],
+    "social": [
+        {
+            "id": "linkedin",
+            "title": "LinkedIn",
+            "description": "Connect with me on LinkedIn",
+            "url": "https://www.linkedin.com/in/alvaro-de-la-hoz-9a855a280/",
+            "category": "Social",
+            "icon": "💼",
+            "keywords": [
+                "linkedin",
+                "professional",
+                "network",
+                "connect"
+            ]
+        },
+        {
+            "id": "github",
+            "title": "GitHub",
+            "description": "Follow me on GitHub for open source projects",
+            "url": "https://github.com/AlvaroDlhz",
+            "category": "Social",
+            "icon": "🐙",
+            "keywords": [
+                "github",
+                "code",
+                "repositories",
+                "open source"
+            ]
+        },
+        {
+            "id": "twitter",
+            "title": "X (Twitter)",
+            "description": "Follow me on X for updates and thoughts",
+            "url": "https://x.com/alvaro_dlhz",
+            "category": "Social",
+            "icon": "🐦",
+            "keywords": [
+                "twitter",
+                "x",
+                "social",
+                "updates"
+            ]
+        },
+        {
+            "id": "instagram",
+            "title": "Instagram",
+            "description": "Follow my creative journey on Instagram",
+            "url": "https://instagram.com/anxious_overachiever",
+            "category": "Social",
+            "icon": "📸",
+            "keywords": [
+                "instagram",
+                "photos",
+                "art",
+                "creative"
+            ]
+        },
+        {
+            "id": "youtube",
+            "title": "YouTube",
+            "description": "Subscribe to my YouTube channel",
+            "url": "https://www.youtube.com/@Alvaro_dlhz",
+            "category": "Social",
+            "icon": "📺",
+            "keywords": [
+                "youtube",
+                "videos",
+                "content",
+                "subscribe"
+            ]
+        }
+    ],
+    "features": [
+        {
+            "id": "stats-experience",
+            "title": "3+ Years Experience",
+            "description": "Years of professional experience in development and design",
+            "url": "index.html#person",
+            "category": "Stats",
+            "icon": "⏱️",
+            "keywords": [
+                "experience",
+                "years",
+                "professional"
+            ]
+        },
+        {
+            "id": "stats-projects",
+            "title": "20+ Projects",
+            "description": "Completed projects across various domains",
+            "url": "index.html#developer",
+            "category": "Stats",
+            "icon": "📊",
+            "keywords": [
+                "projects",
+                "portfolio",
+                "work"
+            ]
+        },
+        {
+            "id": "stats-passion",
+            "title": "100% Passion",
+            "description": "Fully dedicated to creating meaningful experiences",
+            "url": "index.html#person",
+            "category": "Stats",
+            "icon": "❤️",
+            "keywords": [
+                "passion",
+                "dedication",
+                "commitment"
+            ]
+        }
+    ]
+}

@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/auth.css">
     <link rel="stylesheet" href="styles/signup-popup.css">
+    <link rel="stylesheet" href="styles/search.css">
 
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -43,6 +44,21 @@
                 <img src="assets/images/landingphoto.jpg" alt="AD" class="logo-img">
                 <span class="logo-text">Hi there</span>
             </a>
+
+            <!-- Universal Search -->
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <input type="text" id="universal-search-input" class="search-input" placeholder="Search... (Ctrl+K)"
+                        autocomplete="off">
+                    <button class="search-clear" id="search-clear" aria-label="Clear search">&times;</button>
+                </div>
+                <div class="search-results" id="search-results"></div>
+            </div>
 
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span class="bar"></span>
@@ -359,6 +375,7 @@
     </div>
 
     <!-- Scripts -->
+    <script src="js/search.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/visuals.js"></script>
 </body>
