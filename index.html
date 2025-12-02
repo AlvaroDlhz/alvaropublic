@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="styles/auth.css">
     <link rel="stylesheet" href="styles/signup-popup.css">
     <link rel="stylesheet" href="styles/search.css">
+    <link rel="stylesheet" href="styles/action-buttons.css">
 
     <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -128,19 +129,19 @@
                             canvas or writing code, I strive to create meaningful experiences that resonate with people.
                         </p>
 
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <span class="stat-number">3+</span>
-                                <span class="stat-label">Years Exp.</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">20+</span>
-                                <span class="stat-label">Projects</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">Passion</span>
-                            </div>
+                        <div class="action-buttons-grid">
+                            <button class="action-btn" id="tech-stack-btn">
+                                <span class="action-btn-icon">💻</span>
+                                <span class="action-btn-label">Tech Stack</span>
+                            </button>
+                            <a href="work-experience.html" class="action-btn">
+                                <span class="action-btn-icon">💼</span>
+                                <span class="action-btn-label">Experiences</span>
+                            </a>
+                            <button class="action-btn" id="certifications-btn">
+                                <span class="action-btn-icon">🏆</span>
+                                <span class="action-btn-label">Certifications</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -376,6 +377,7 @@
 
     <!-- Scripts -->
     <script src="js/search.js"></script>
+    <script src="js/action-buttons.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/visuals.js"></script>
 </body>

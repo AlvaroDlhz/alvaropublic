@@ -1,0 +1,66 @@
+===========================================
+INSTRUCCIONES PARA INTEGRAR LOS BOTONES
+===========================================
+
+1. AGREGAR ESTILOS EN EL <head> (después de search.css):
+   <link rel="stylesheet" href="styles/action-buttons.css">
+
+2. AGREGAR SCRIPT AL FINAL DEL <body> (antes de visuals.js):
+   <script src="js/action-buttons.js"></script>
+
+3. REEMPLAZAR EL CÓDIGO DE STATS-GRID (líneas 131-144):
+
+BUSCA ESTE CÓDIGO:
+------------------
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Years Exp.</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Passion</span>
+                            </div>
+                        </div>
+
+REEMPLÁZALO CON:
+----------------
+                        <div class="action-buttons-grid">
+                            <button class="action-btn" id="tech-stack-btn">
+                                <span class="action-btn-icon">💻</span>
+                                <span class="action-btn-label">Tech Stack</span>
+                            </button>
+                            <a href="work-experience.html" class="action-btn">
+                                <span class="action-btn-icon">💼</span>
+                                <span class="action-btn-label">Work Experience</span>
+                            </a>
+                            <button class="action-btn" id="certifications-btn">
+                                <span class="action-btn-icon">🏆</span>
+                                <span class="action-btn-label">Certifications</span>
+                            </button>
+                        </div>
+
+===========================================
+ARCHIVOS CREADOS:
+===========================================
+
+✅ styles/action-buttons.css - Estilos para botones y popups
+✅ js/action-buttons.js - Funcionalidad de popups
+✅ work-experience.html - Página de experiencia laboral
+
+===========================================
+PERSONALIZACIÓN:
+===========================================
+
+Para editar el Tech Stack, abre: js/action-buttons.js
+Busca la variable: techStackData
+
+Para editar Certificaciones, abre: js/action-buttons.js
+Busca la variable: certificationsData
+
+Para editar Work Experience, abre: work-experience.html
+Modifica los items del timeline
