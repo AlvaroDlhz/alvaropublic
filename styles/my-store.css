@@ -1,5 +1,5 @@
 /* =========================================
-   MY STORE - STYLESHEET
+   MY STORE - STYLESHEET (UNIFIED NAVBAR)
    E-commerce design following the premium Liquid Glass aesthetic
    ========================================= */
 
@@ -14,85 +14,155 @@
 }
 
 /* =========================================
-   2. STORE HERO SECTION
+   2. UNIFIED NAVBAR
    ========================================= */
-.store-hero-section {
-    height: 80vh;
+.unified-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition-normal);
+}
+
+.unified-nav-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Top Row: Logo, Search, Actions */
+.nav-top-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 0.75rem;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    white-space: nowrap;
+}
+
+/* Search Box in Navbar */
+.nav-top-row .search-box {
     position: relative;
-    overflow: hidden;
-    padding: 0;
-    margin-top: 80px;
+    max-width: 500px;
+    width: 100%;
 }
 
-/* =========================================
-   3. FILTER & SEARCH SECTION
-   ========================================= */
-.filter-section {
-    padding: var(--spacing-lg) 0;
-    background: rgba(255, 255, 255, 0.02);
-    border-bottom: 1px solid var(--color-border);
-    position: sticky;
-    top: 80px;
-    z-index: 100;
-    backdrop-filter: blur(20px);
-}
-
-.filter-controls {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: var(--spacing-md);
-    align-items: center;
-}
-
-.search-box {
-    position: relative;
-    max-width: 400px;
-}
-
-.search-box .search-icon {
+.nav-top-row .search-box .search-icon {
     position: absolute;
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     color: var(--color-text-secondary);
     pointer-events: none;
 }
 
-.search-input {
+.nav-top-row .search-input {
     width: 100%;
-    padding: 1rem 1rem 1rem 3rem;
+    padding: 0.75rem 1rem 0.75rem 2.75rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--color-border);
     border-radius: 50px;
     color: var(--color-text-primary);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: var(--transition-normal);
 }
 
-.search-input:focus {
+.nav-top-row .search-input:focus {
     outline: none;
     border-color: rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-top-row .search-input::placeholder {
+    color: var(--color-text-secondary);
+}
+
+/* Nav Actions */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    position: relative;
+    transition: var(--transition-fast);
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    color: var(--color-text-primary);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-text-primary);
+    transition: var(--transition-fast);
+}
+
+/* Bottom Row: Filters & Sort */
+.nav-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
 }
 
 .filter-buttons {
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
+    flex: 1;
 }
 
 .filter-btn {
-    padding: 0.65rem 1.5rem;
+    padding: 0.5rem 1.25rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--color-border);
     border-radius: 50px;
     color: var(--color-text-secondary);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition-normal);
@@ -103,6 +173,7 @@
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.2);
     color: var(--color-text-primary);
+    transform: translateY(-1px);
 }
 
 .filter-btn.active {
@@ -116,12 +187,12 @@
 }
 
 .sort-select {
-    padding: 0.65rem 2.5rem 0.65rem 1.5rem;
+    padding: 0.5rem 2.5rem 0.5rem 1.25rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--color-border);
     border-radius: 50px;
     color: var(--color-text-primary);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition-normal);
@@ -139,6 +210,25 @@
 .sort-select:focus {
     outline: none;
     border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    display: none;
+}
+
+/* =========================================
+   3. STORE HERO SECTION
+   ========================================= */
+.store-hero-section {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 140px;
 }
 
 /* =========================================
@@ -819,18 +909,28 @@
 /* =========================================
    10. RESPONSIVE DESIGN
    ========================================= */
-@media (max-width: 1024px) {
-    .filter-controls {
-        grid-template-columns: 1fr;
+@media (max-width: 1200px) {
+    .nav-top-row {
+        grid-template-columns: auto 1fr auto;
+        gap: 1.5rem;
+    }
+
+    .nav-actions {
         gap: 1rem;
     }
 
-    .search-box {
-        max-width: 100%;
+    .nav-bottom-row {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1024px) {
+    .unified-nav-container {
+        width: 95%;
     }
 
-    .filter-buttons {
-        justify-content: center;
+    .nav-top-row .search-box {
+        max-width: 100%;
     }
 
     .products-grid {
@@ -849,11 +949,45 @@
 @media (max-width: 768px) {
     .store-hero-section {
         height: 60vh;
-        margin-top: 60px;
+        margin-top: 200px;
     }
 
-    .filter-section {
-        top: 60px;
+    .nav-top-row {
+        grid-template-columns: auto 1fr auto;
+        gap: 1rem;
+        padding: 0.75rem 0;
+    }
+
+    .nav-top-row .search-box {
+        grid-column: 1 / -1;
+        order: 3;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-bottom-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .filter-buttons {
+        justify-content: center;
+        order: 2;
+    }
+
+    .sort-dropdown {
+        order: 1;
+    }
+
+    .sort-select {
+        width: 100%;
     }
 
     .products-grid {
@@ -868,15 +1002,6 @@
     .cart-sidebar {
         width: 100%;
         right: -100%;
-    }
-
-    .mobile-menu-btn {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .nav-links {
-        display: none;
     }
 
     .mobile-menu-overlay {
