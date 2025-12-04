@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store - Alvaro De la Hoz</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Shop exclusive art prints, digital products, and creative works by Alvaro De la Hoz.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/my-store.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/landingphoto.jpg" alt="AD" class="logo-img">
+                <span class="logo-text">My Store</span>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li>
+                    <button class="cart-btn" id="cartBtn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9 2L7.17 4H3C1.9 4 1 4.9 1 6V20C1 21.1 1.9 22 3 22H21C22.1 22 23 21.1 23 20V6C23 4.9 22.1 4 21 4H16.83L15 2H9Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="12" cy="13" r="3" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="#products" class="mobile-nav-link">Products</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="store-hero-section">
+            <div class="hero-content fade-in-up">
+                <h1 class="hero-title">
+                    <span class="block-reveal">Exclusive Art & Digital Products</span>
+                </h1>
+                <p class="hero-subtitle">Discover unique creations, limited editions, and digital masterpieces.</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary">Browse Collection</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-visual parallax" data-speed="0.5">
+                <div class="gradient-sphere"></div>
+            </div>
+        </section>
+
+        <!-- Filter & Search Section -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="search-box">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                        <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                    </div>
+
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="art">Art Prints</button>
+                        <button class="filter-btn" data-category="digital">Digital</button>
+                        <button class="filter-btn" data-category="merch">Merchandise</button>
+                        <button class="filter-btn" data-category="limited">Limited Edition</button>
+                    </div>
+
+                    <div class="sort-dropdown">
+                        <select id="sortSelect" class="sort-select">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="section products-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-label">Shop</span>
+                    <h2 class="section-title">Featured Products</h2>
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+
+                <div class="no-results" id="noResults" style="display: none;">
+                    <p>No products found. Try adjusting your filters.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Store Section -->
+        <section id="about" class="section about-store-section">
+            <div class="container">
+                <div class="about-store-wrapper">
+                    <div class="about-store-content fade-in-left">
+                        <span class="section-label">About</span>
+                        <h2 class="section-title">Why Shop Here?</h2>
+                        <p>Every piece in this store is carefully crafted with passion and attention to detail. From
+                            original art prints to exclusive digital downloads, each product represents a unique vision.
+                        </p>
+
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">🎨</div>
+                                <h3>Original Artwork</h3>
+                                <p>Unique pieces created by Alvaro De la Hoz</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">⚡</div>
+                                <h3>Instant Download</h3>
+                                <p>Digital products available immediately</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🌟</div>
+                                <h3>Limited Editions</h3>
+                                <p>Exclusive releases with numbered certificates</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">🔒</div>
+                                <h3>Secure Checkout</h3>
+                                <p>Safe and encrypted payment processing</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-store-visual fade-in-right">
+                        <div class="visual-card">
+                            <img src="assets/images/suminagashi.jpg" alt="Art Preview">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="cart-close" id="cartClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <div class="cart-empty" id="cartEmpty">
+            <p>Your cart is empty</p>
+            <a href="#products" class="btn btn-secondary">Start Shopping</a>
+        </div>
+
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount" id="totalAmount">$0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Alvaro De la Hoz. All rights reserved.</p>
+            <p class="footer-note">Made with ❤️ and code</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/my-store.js"></script>
+    <script src="js/visuals.js"></script>
+</body>
+
+</html>
