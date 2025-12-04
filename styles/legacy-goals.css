@@ -1,0 +1,85 @@
+/* =========================================
+   LEGACY GOALS SECTION
+   ========================================= */
+.legacy-goals {
+    grid-area: contenttwo;
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.legacy-goals h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.legacy-goals-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.legacy-goal-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.legacy-goal-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 217, 255, 0.6), rgba(255, 0, 110, 0.6));
+    opacity: 0;
+    transition: var(--transition-normal);
+}
+
+.legacy-goal-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+.legacy-goal-item:hover::before {
+    opacity: 1;
+}
+
+.legacy-goal-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.legacy-goal-title {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-primary);
+}
+
+.legacy-goal-description {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .legacy-goals h3 {
+        font-size: 1.3rem;
+    }
+
+    .legacy-goal-item {
+        padding: 1.25rem;
+    }
+}
