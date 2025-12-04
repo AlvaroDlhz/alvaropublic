@@ -20,6 +20,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/my-store.css">
+    <link rel="stylesheet" href="styles/carousel-compact.css">
 </head>
 
 <body>
@@ -95,20 +96,16 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="store-hero-section">
-            <div class="hero-content fade-in-up">
-                <h1 class="hero-title">
-                    <span class="block-reveal">Exclusive Art & Digital Products</span>
-                </h1>
-                <p class="hero-subtitle">Discover unique creations, limited editions, and digital masterpieces.</p>
-                <div class="hero-cta">
-                    <a href="#products" class="btn btn-primary">Browse Collection</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
-                </div>
+        <!-- Hero Carousel Section -->
+        <section id="home" class="hero-carousel-section">
+            <div class="carousel-header">
+                <h2 class="carousel-title">🎄 Chrismas Offers</h2>
             </div>
-            <div class="hero-visual parallax" data-speed="0.5">
-                <div class="gradient-sphere"></div>
+
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Carousel items will be dynamically loaded here -->
+                </div>
             </div>
         </section>
 

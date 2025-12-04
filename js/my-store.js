@@ -112,10 +112,103 @@ let searchQuery = '';
 // 3. INITIALIZATION
 // =========================================
 document.addEventListener('DOMContentLoaded', () => {
+    renderCarousel();
     renderProducts();
     updateCartUI();
     initializeEventListeners();
 });
+
+// =========================================
+// 3.5. CAROUSEL FUNCTIONALITY
+// =========================================
+function renderCarousel() {
+    const carouselTrack = document.getElementById('carouselTrack');
+    if (!carouselTrack) return;
+
+    // Get products with discounts/sales
+    const featuredProducts = products.filter(p => p.originalPrice || p.badge === 'sale' || p.badge === 'limited');
+
+    // Duplicate products for infinite scroll effect (3x for seamless loop)
+    const carouselProducts = [...featuredProducts, ...featuredProducts, ...featuredProducts];
+
+    carouselTrack.innerHTML = carouselProducts.map(product => {
+        const discount = product.originalPrice
+            ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
+            : 0;
+
+        return `
+            <div class="carousel-item" data-product-id="${product.id}">
+                <div class="carousel-item-image-wrapper">
+                    <img src="${product.image}" alt="${product.title}" class="carousel-item-image">
+                    ${product.badge ? `<span class="carousel-item-badge">${product.badge}</span>` : ''}
+                    ${discount > 0 ? `<span class="carousel-item-discount">-${discount}%</span>` : ''}
+                </div>
+                <div class="carousel-item-info">
+                    <p class="carousel-item-category">${product.category}</p>
+                    <h3 class="carousel-item-title">${product.title}</h3>
+                    <p class="carousel-item-description">${product.description}</p>
+                    <div class="carousel-item-footer">
+                        <div class="carousel-item-prices">
+                            <span class="carousel-item-price">$${product.price.toFixed(2)}</span>
+                            ${product.originalPrice ? `<span class="carousel-item-original-price">$${product.originalPrice.toFixed(2)}</span>` : ''}
+                        </div>
+                        <button class="carousel-item-btn" onclick="addToCart(${product.id})">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    // Add click event to carousel items
+    document.querySelectorAll('.carousel-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            if (!e.target.closest('.carousel-item-btn')) {
+                const productId = parseInt(item.dataset.productId);
+                openProductModal(productId);
+            }
+        });
+    });
+}
+
+function initializeCarouselControls() {
+    const carouselTrack = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+
+    if (!carouselTrack) return;
+
+    let currentScroll = 0;
+    const scrollAmount = 250; // Item width + gap (compact)
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentScroll -= scrollAmount;
+            carouselTrack.style.transform = `translateX(${currentScroll}px)`;
+            carouselTrack.style.animation = 'none';
+
+            setTimeout(() => {
+                carouselTrack.style.animation = 'infiniteScroll 25s linear infinite';
+            }, 500);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentScroll += scrollAmount;
+            carouselTrack.style.transform = `translateX(${currentScroll}px)`;
+            carouselTrack.style.animation = 'none';
+
+            setTimeout(() => {
+                carouselTrack.style.animation = 'infiniteScroll 30s linear infinite';
+            }, 500);
+        });
+    }
+}
 
 // =========================================
 // 4. EVENT LISTENERS
