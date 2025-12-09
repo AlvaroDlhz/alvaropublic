@@ -22,11 +22,16 @@ function initConverterCards() {
 
 // Handle conversion card click
 function handleConversion(conversion) {
-    // For now, just show an alert
-    // In the future, this will navigate to the actual converter page
     const [from, to] = conversion.split('-');
 
-    // Create a temporary notification
+    // Check if we have a dedicated page for this conversion
+    if (conversion === 'docx-pdf') {
+        // Navigate to the DOCX to PDF converter page
+        window.location.href = 'docx-to-pdf.html';
+        return;
+    }
+
+    // For other converters, show "coming soon" notification
     showNotification(`${from.toUpperCase()} → ${to.toUpperCase()} converter coming soon!`);
 }
 

@@ -220,13 +220,13 @@ h6 {
     bottom: -5px;
     left: 0;
     width: 0;
-    height: 0;
+    height: 1px;
     background-color: var(--color-accent);
     transition: var(--transition-fast);
 }
 
 .nav-link:hover::after {
-    width: 50%;
+    width: 100%;
 }
 
 .contact-btn {
@@ -494,57 +494,6 @@ h6 {
 .person-image-container:hover .person-img {
     filter: grayscale(0%);
     transform: scale(1.02);
-}
-
-/* Small social buttons overlay on the person image */
-.image-decoration {
-    position: relative;
-    left: auto;
-    bottom: auto;
-    transform: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
-    margin-top: 0.5rem;
-    align-items: center;
-    z-index: 3;
-}
-
-.image-decoration .social-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid var(--color-border);
-    color: var(--color-text-primary);
-    transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
-}
-
-.image-decoration .social-btn svg {
-    width: 60%;
-    height: 60%;
-}
-
-.image-decoration .social-btn:hover {
-    transform: translateY(-4px);
-    background: rgba(255, 255, 255, 0.06);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
-}
-
-@media (max-width: 768px) {
-    .image-decoration {
-        justify-content: center;
-        margin-top: 0.5rem;
-    }
-
-    .image-decoration .social-btn {
-        width: 44px;
-        height: 44px;
-    }
 }
 
 .person-content {

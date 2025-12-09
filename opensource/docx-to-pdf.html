@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCX to PDF Converter - Alvaro De la Hoz</title>
+
+    <!-- SEO & Caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="description" content="Convert your Word documents (DOCX) to PDF format instantly and securely.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="opensource-styles/docx-to-pdf.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/landingphoto.jpg" alt="AD" class="logo-img">
+                <span class="logo-text">Hi ✨</span>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="../index.html#person" class="nav-link">Person</a></li>
+                <li><a href="../index.html#artist" class="nav-link">Artist</a></li>
+                <li><a href="../index.html#developer" class="nav-link">Developer</a></li>
+                <li><a href="../index.html#contact" class="nav-link contact-btn">Get in Touch</a></li>
+                <li><a href="../thoughts.html" class="nav-link premium-btn">VIP</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay">
+        <ul class="mobile-nav-links">
+            <li><a href="../index.html#person" class="mobile-nav-link">Person</a></li>
+            <li><a href="../index.html#artist" class="mobile-nav-link">Artist</a></li>
+            <li><a href="../index.html#developer" class="mobile-nav-link">Developer</a></li>
+            <li><a href="../thoughts.html" class="mobile-nav-link">VIP</a></li>
+            <li><a href="../index.html#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="converter-hero">
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <a href="format-converter.html" class="back-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 12H5M12 19l-7-7 7-7" />
+                        </svg>
+                        Back to Converters
+                    </a>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">DOCX → PDF</span>
+                    </h1>
+                    <p class="hero-subtitle">Convert your Word documents to PDF format instantly</p>
+                    <p class="hero-description">Fast, secure, and completely free. Your files never leave your browser.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Converter Section -->
+        <section class="converter-section">
+            <div class="container">
+                <div class="converter-container">
+                    <!-- Upload Area -->
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-icon">📋</div>
+                        <h3 class="upload-title">Drop your DOCX file here</h3>
+                        <p class="upload-subtitle">or click to browse</p>
+                        <input type="file" id="fileInput" accept=".docx" hidden>
+                        <button class="btn btn-primary" id="browseBtn">Choose File</button>
+                        <p class="upload-note">Maximum file size: 10MB</p>
+                    </div>
+
+                    <!-- File Info (Hidden initially) -->
+                    <div class="file-info" id="fileInfo" style="display: none;">
+                        <div class="file-details">
+                            <div class="file-icon">📄</div>
+                            <div class="file-meta">
+                                <h4 class="file-name" id="fileName">document.docx</h4>
+                                <p class="file-size" id="fileSize">0 KB</p>
+                            </div>
+                            <button class="remove-file-btn" id="removeFileBtn" aria-label="Remove file">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Conversion Options -->
+                        <div class="conversion-options">
+                            <h4 class="options-title">Conversion Options</h4>
+                            <div class="option-group">
+                                <label class="option-label">
+                                    <input type="checkbox" id="preserveFormatting" checked>
+                                    <span class="option-text">Preserve formatting</span>
+                                </label>
+                                <label class="option-label">
+                                    <input type="checkbox" id="embedFonts" checked>
+                                    <span class="option-text">Embed fonts</span>
+                                </label>
+                                <label class="option-label">
+                                    <input type="checkbox" id="compressPDF">
+                                    <span class="option-text">Compress PDF</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Convert Button -->
+                        <button class="btn btn-primary convert-btn" id="convertBtn">
+                            <span class="btn-text">Convert to PDF</span>
+                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <!-- Progress Bar (Hidden initially) -->
+                        <div class="progress-container" id="progressContainer" style="display: none;">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <p class="progress-text" id="progressText">Converting... 0%</p>
+                        </div>
+
+                        <!-- Download Area (Hidden initially) -->
+                        <div class="download-area" id="downloadArea" style="display: none;">
+                            <div class="success-icon">✅</div>
+                            <h4 class="success-title">Conversion Complete!</h4>
+                            <p class="success-subtitle">Your PDF is ready to download</p>
+                            <button class="btn btn-primary download-btn" id="downloadBtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                                Download PDF
+                            </button>
+                            <button class="btn btn-secondary" id="convertAnotherBtn">Convert Another File</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <div class="features-grid">
+                    <div class="feature-card fade-in-up">
+                        <div class="feature-icon">🔒</div>
+                        <h3 class="feature-title">100% Secure</h3>
+                        <p class="feature-description">All conversions happen in your browser. Your files never leave
+                            your
+                            device.</p>
+                    </div>
+                    <div class="feature-card fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">Lightning Fast</h3>
+                        <p class="feature-description">Convert your documents in seconds with our optimized conversion
+                            engine.</p>
+                    </div>
+                    <div class="feature-card fade-in-up" style="transition-delay: 0.2s;">
+                        <div class="feature-icon">🎨</div>
+                        <h3 class="feature-title">Perfect Quality</h3>
+                        <p class="feature-description">Preserve all formatting, fonts, and images with pixel-perfect
+                            accuracy.</p>
+                    </div>
+                    <div class="feature-card fade-in-up" style="transition-delay: 0.3s;">
+                        <div class="feature-icon">💯</div>
+                        <h3 class="feature-title">Completely Free</h3>
+                        <p class="feature-description">No hidden fees, no subscriptions. Convert unlimited files for
+                            free.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Alvaro De la Hoz. All rights reserved.</p>
+            <p class="footer-note">👻</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/visuals.js"></script>
+    <script src="opensource-scripts/docx-to-pdf.js"></script>
+</body>
+
+</html>

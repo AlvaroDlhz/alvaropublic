@@ -1,233 +1,119 @@
+/* =========================================
+   REDESIGNS PAGE - MAIN STYLESHEET
+   Matching the portfolio's dark minimalist aesthetic
+   ========================================= */
+
+/* =========================================
+   1. CSS VARIABLES (DESIGN TOKENS)
+   ========================================= */
 :root {
-    /* Alineando con los colores del index.css */
-    --primary: var(--color-primary);
-    --primary-dark: #2980b9;
-    --background: var(--color-background);
-    --surface: #1a0940;
-    --text: var(--color-text);
-    --text-muted: var(--color-subtitle);
-    
-    /* Glassmorphism ajustado a la paleta */
-    --glass-bg: rgba(245, 245, 245, 0.05);
-    --glass-border: rgba(245, 245, 245, 0.1);
-    --glass-shadow: rgba(0, 0, 0, 0.3);
-    
-    /* Manteniendo las variables de layout */
+    /* Colors - Matching index.css */
+    --color-bg-primary: #0a0a0a;
+    --color-bg-secondary: #141414;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a0a0a0;
+    --color-accent: #ffffff;
+    --color-border: rgba(255, 255, 255, 0.1);
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-display: 'Space Grotesk', var(--font-primary);
+
+    /* Spacing */
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 6rem;
     --max-width: 1400px;
     --gap: 1.5rem;
     --radius: 1rem;
-    --transition: 0.3s ease;
-    
-    /* Gradientes ajustados a la paleta del proyecto */
-    --gradient-1: var(--color-primary);
-    --gradient-2: var(--color-secondary);
-    --gradient-3: var(--color-accent);
-    --gradient-4: #9b59b6;
-    
-    --animation-speed: 15s;
-    --blur-intensity: 80px;
-    --gradient-opacity: 0.15;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   2. RESET & BASE STYLES
+   ========================================= */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
-    background-color: #f5f5f5;
-    color: var(--text);
-    font-family: system-ui, -apple-system, sans-serif;
-    line-height: 1.5;
+    font-family: var(--font-primary);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
     margin: 0;
-    padding: 2rem;
-    position: relative;
+    padding: 0;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Fondo animado multicolor */
-body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background: 
-        radial-gradient(circle at 0% 0%, var(--gradient-1) 0%, transparent 50%),
-        radial-gradient(circle at 100% 0%, var(--gradient-2) 0%, transparent 50%),
-        radial-gradient(circle at 100% 100%, var(--gradient-3) 0%, transparent 50%),
-        radial-gradient(circle at 0% 100%, var(--gradient-4) 0%, transparent 50%);
-    opacity: var(--gradient-opacity);
-    filter: blur(var(--blur-intensity));
-    z-index: -1;
-    animation: moveGradient var(--animation-speed) ease-in-out infinite;
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-fast);
 }
 
-@keyframes moveGradient {
-    0% {
-        transform: rotate(0deg) scale(1.5);
-    }
-    25% {
-        transform: rotate(90deg) scale(1.75);
-    }
-    50% {
-        transform: rotate(180deg) scale(1.5);
-    }
-    75% {
-        transform: rotate(270deg) scale(1.75);
-    }
-    100% {
-        transform: rotate(360deg) scale(1.5);
-    }
-}
-
+/* =========================================
+   3. LAYOUT
+   ========================================= */
 .container {
+    width: 90%;
     max-width: var(--max-width);
     margin: 0 auto;
+    padding: 0 var(--spacing-sm);
 }
 
-.bento-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-    gap: var(--gap);
-}
-
-.bento-item {
-    background: rgba(245, 245, 245, 0.05);
-    border: 1px solid rgba(245, 245, 245, 0.1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: var(--radius);
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    transition: transform var(--transition), box-shadow var(--transition);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.bento-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Asegúrate que los elementos dentro del enlace mantengan sus estilos */
-.bento-item article {
-    height: 100%;
-    width: 100%;
-}
-
-.image-wrapper {
-    aspect-ratio: 16/9;
-    overflow: hidden;
-}
-
-.image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform var(--transition);
-}
-
-.bento-item:hover .image-wrapper img {
-    transform: scale(1.05);
-}
-
-.content {
-    padding: 1.5rem;
-}
-
-.tag {
-    background: var(--color-secondary);
-    transition: background-color 0.3s ease;
-    color: white;
-    font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-    display: inline-block;
-    margin-bottom: 1rem;
-}
-
-.tag:hover {
-    background: var(--color-primary);
-}
-
-h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1.25rem;
-    color: var(--text);
-    font-family: 'title-font', sans-serif;
-    letter-spacing: 2px;
-}
-
-.section-header h1 {
-    font-family: 'title-font', sans-serif;
-    letter-spacing: 2px;
-    color: var(--text);
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.section-header p {
-    color: var(--text-muted);
-}
-
-/* Tech Stack Styles */
-.tech-stack {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.tech-stack span {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    background: rgba(245, 245, 245, 0.05);
-    border: 1px solid rgba(245, 245, 245, 0.1);
-    transition: all 0.3s ease;
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-}
-
-.tech-stack span:hover {
-    background: var(--color-secondary);
-    color: var(--text);
-}
-
-/* Featured item styles */
-.bento-item.featured {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: var(--gap);
-}
-
-.bento-item.featured .image-wrapper {
-    aspect-ratio: auto;
-    height: 100%;
-}
-
-/* Header Styles */
+/* =========================================
+   4. HEADER / NAVIGATION
+   ========================================= */
 .site-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 0.75rem 1rem;
-    background: var(--color-background);
-    border-bottom: 1px solid rgba(245, 245, 245, 0.1);
-    backdrop-filter: blur(20px);
+    padding: 1.5rem 0;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-normal);
 }
 
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
 }
 
 .logo {
+    font-family: var(--font-display);
     font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--text);
+    font-weight: 700;
+    color: var(--color-text-primary);
     text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.logo:hover {
+    opacity: 0.8;
 }
 
 .nav-links {
@@ -236,16 +122,33 @@ h3 {
     list-style: none;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 .nav-links a {
-    color: var(--text);
-    text-decoration: none;
-    transition: color var(--transition);
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    position: relative;
+    transition: var(--transition-fast);
 }
 
 .nav-links a:hover {
-    color: var(--color-secondary);
+    color: var(--color-text-primary);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-accent);
+    transition: var(--transition-fast);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 /* Menu toggle button */
@@ -255,6 +158,7 @@ h3 {
     border: none;
     padding: 0.5rem;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .hamburger {
@@ -262,8 +166,8 @@ h3 {
     position: relative;
     width: 24px;
     height: 2px;
-    background: var(--text);
-    transition: var(--transition);
+    background: var(--color-text-primary);
+    transition: var(--transition-fast);
 }
 
 .hamburger::before,
@@ -272,8 +176,8 @@ h3 {
     position: absolute;
     width: 24px;
     height: 2px;
-    background: var(--text);
-    transition: var(--transition);
+    background: var(--color-text-primary);
+    transition: var(--transition-fast);
 }
 
 .hamburger::before {
@@ -284,15 +188,233 @@ h3 {
     bottom: -8px;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+/* =========================================
+   5. MAIN CONTENT
+   ========================================= */
+.main-content {
+    padding-top: 120px;
+    min-height: 100vh;
+}
+
+/* =========================================
+   6. SECTION HEADER
+   ========================================= */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.02em;
+}
+
+.section-header p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   7. BENTO GALLERY
+   ========================================= */
+.bento-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: var(--gap);
+    margin-bottom: var(--spacing-xl);
+}
+
+.bento-item {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+.bento-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.bento-item article {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   8. IMAGE WRAPPER
+   ========================================= */
+.image-wrapper {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: var(--color-bg-primary);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-normal);
+    filter: grayscale(20%);
+}
+
+.bento-item:hover .image-wrapper img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+/* =========================================
+   9. CONTENT
+   ========================================= */
+.content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.content h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--color-text-primary);
+}
+
+.content p {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex: 1;
+}
+
+/* =========================================
+   10. TAGS
+   ========================================= */
+.tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: var(--transition-fast);
+}
+
+.tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-text-primary);
+    color: var(--color-text-primary);
+}
+
+/* =========================================
+   11. TECH STACK
+   ========================================= */
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.tech-stack span {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+    color: var(--color-text-secondary);
+    transition: var(--transition-fast);
+}
+
+.tech-stack span:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-primary);
+}
+
+/* =========================================
+   12. FEATURED ITEM
+   ========================================= */
+.bento-item.featured {
+    grid-column: 1 / -1;
+}
+
+.bento-item.featured article {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 0;
+}
+
+.bento-item.featured .image-wrapper {
+    aspect-ratio: auto;
+    height: 100%;
+}
+
+.bento-item.featured .content {
+    padding: var(--spacing-lg);
+}
+
+/* Wide variant */
+.bento-item.wide {
+    grid-column: span 2;
+}
+
+/* Tall variant */
+.bento-item.tall {
+    grid-row: span 2;
+}
+
+.bento-item.tall .image-wrapper {
+    aspect-ratio: 1;
+}
+
+/* =========================================
+   13. RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 1024px) {
+    .bento-item.wide {
+        grid-column: span 1;
     }
 
-    .nav-wrapper {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    .bento-item.featured article {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-item.featured .image-wrapper {
+        aspect-ratio: 16/9;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --spacing-lg: 3rem;
+        --spacing-xl: 5rem;
+    }
+
+    .main-content {
+        padding-top: 100px;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     .nav-links {
@@ -302,13 +424,13 @@ h3 {
         right: 0;
         flex-direction: column;
         align-items: center;
-        padding: 1rem;
-        background: var(--color-background);
-        border-bottom: 1px solid rgba(245, 245, 245, 0.1);
+        padding: 2rem;
+        background: var(--color-bg-primary);
+        border-bottom: 1px solid var(--color-border);
         transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
-        transition: var(--transition);
+        transition: var(--transition-normal);
     }
 
     .nav-links.active {
@@ -330,4 +452,71 @@ h3 {
         bottom: 0;
         transform: rotate(-45deg);
     }
+
+    .bento-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-item.tall {
+        grid-row: span 1;
+    }
+
+    .bento-item.tall .image-wrapper {
+        aspect-ratio: 16/9;
+    }
+}
+
+/* =========================================
+   14. ANIMATIONS
+   ========================================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bento-item {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.bento-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.bento-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.bento-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.bento-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.bento-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.bento-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.bento-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.bento-item:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.bento-item:nth-child(9) {
+    animation-delay: 0.9s;
 }
